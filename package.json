@@ -1,0 +1,17 @@
+{
+  "name": "fluentsmtp-user-docs",
+  "version": "1.0.0",
+  "description": "FluentSMTP User Documentation",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  }
+}
