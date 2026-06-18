@@ -17,6 +17,31 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/webp', href: '/images/brand/fluentSMTP_primary_icon.webp' }]
   ],
   themeConfig: {
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: 'Search docs',
+                buttonAriaLabel: 'Search documentation'
+              },
+              modal: {
+                noResultsText: 'No results for',
+                resetButtonTitle: 'Reset search',
+                backButtonTitle: 'Close search',
+                footer: {
+                  selectText: 'to select',
+                  navigateText: 'to navigate',
+                  closeText: 'to close'
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     logo: {
       light: '/images/brand/fluentSMTP_primary_logo.webp',
       dark: '/images/brand/fluentSMTP_secondary_logo.webp',
