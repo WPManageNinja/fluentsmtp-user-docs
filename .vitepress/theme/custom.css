@@ -50,3 +50,48 @@
   --vp-c-brand-3: #9E0099;
   --vp-c-brand-soft: rgba(194, 0, 188, 0.16);
 }
+
+/**
+ * Tutorial Video Embeds
+ *
+ * Videos are added the VitePress way — a plain YouTube <iframe> written
+ * directly in markdown — wrapped in .video-container.
+ *
+ * The wrapper is required. VitePress's base reset gives iframes
+ * `display: block`, but its `max-width: 100%` rule covers only `img` and
+ * `video`. A bare iframe therefore keeps its intrinsic 560x315 size and
+ * overflows the content column on phones. This wrapper drops the fixed size
+ * and makes the frame fluid.
+ *
+ * Sizing matches screenshots exactly: doc images are `max-width: 100%`, so
+ * they render at the full width of the content column (688px with the outline
+ * visible, wider without). `width: 100%` here resolves to that same number at
+ * every breakpoint, and `aspect-ratio` supplies the height, so the video and
+ * the screenshots below it share one edge-to-edge column.
+ */
+.vp-doc .video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* Same vertical rhythm as .vp-doc p, which is what wraps an image. */
+  margin: 16px 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+}
+
+.vp-doc .video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Fallback for browsers without aspect-ratio: 56.25% == 9/16. */
+@supports not (aspect-ratio: 16 / 9) {
+  .vp-doc .video-container {
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+}

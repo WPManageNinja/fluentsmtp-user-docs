@@ -6,6 +6,17 @@ Whether you are sending a handful of transactional emails or routing thousands o
 
 This guide walks you through every section of the dashboard so you can find what you need at a glance.
 
+<div class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/GxHY9ZVGvL8"
+    title="FluentSMTP: The Smartest Email SMTP Solution for WordPress"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+</div>
+
 ## Dashboard Home
 
 The **Dashboard Home** is the first screen you see after opening FluentSMTP. It gives you a quick snapshot of your email activity — total emails sent, success and failure counts, your active connections, and the most recent delivery trends — all in one place.

@@ -9,4 +9,4 @@ export default {
   enhanceApp({ app }) {
     app.component('Feedback', Feedback)
   }
-} 
+}

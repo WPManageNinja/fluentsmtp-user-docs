@@ -6,6 +6,19 @@ Google is one of the best email delivery methods available in the market. Free a
 
 This article will guide you through configuring **Gmail/Google Workspace** with **FluentSMTP**.
 
+<div class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/hDcolf4oLlM"
+    title="Connect Gmail or Google Workspace Emails With FluentSMTP"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+</div>
+
+> **Note:** The written steps below stay current with the latest Google Cloud Console layout, so follow them if anything on screen looks different from the video.
+
 ## Configuring Gmail or Google Workspace
 
 First, go to **FluentSMTP** from **Settings** of **WordPress** **Dashboard** in the left sidebar, and select your email service provider as per your needs from the given **Connection Providers**. 
