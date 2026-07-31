@@ -117,6 +117,27 @@ node .claude/skills/validate-docs/scripts/validate.mjs --quiet   # errors only
 node .claude/skills/validate-docs/scripts/validate.mjs --json    # machine-readable
 ```
 
+## Tutorial Videos
+
+Videos are embedded the standard VitePress way — a plain YouTube `<iframe>` written directly in the markdown — inside a `.video-container` wrapper:
+
+```html
+<div class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/hDcolf4oLlM"
+    title="Connect Gmail or Google Workspace Emails With FluentSMTP"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+</div>
+```
+
+The wrapper is required: VitePress applies `max-width: 100%` to `img` and `video` but not to `iframe`, so an unwrapped embed keeps its intrinsic `560x315` and overflows on mobile. The wrapper makes the frame fluid at `width: 100%` with a 16:9 `aspect-ratio`, giving it exactly the rendered width of a screenshot at every breakpoint. Styles are in `.vitepress/theme/custom.css`.
+
+Only videos from the official [WPManageNinja channel](https://www.youtube.com/@wpmanageninja) are embedded. Two of the 24 docs currently have one, which is all the official channel offers. See [`CLAUDE.md`](CLAUDE.md) for the full convention.
+
 ## Feedback Widget
 
 Every doc page renders a thumbs-up/down and comment widget below the content, implemented in `.vitepress/theme/components/Feedback.vue`. Responses POST to a Google Apps Script endpoint and are tagged with `PRODUCT_NAME`, which distinguishes this repo from its sibling WPManageNinja doc sites. Change that constant if you reuse the component elsewhere.

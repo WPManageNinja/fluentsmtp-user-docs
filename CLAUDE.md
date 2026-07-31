@@ -123,9 +123,53 @@ Use `/sync-images {slug}` to download, convert, and remap automatically.
 
 The theme extends VitePress's default with exactly one addition: `Layout.vue` renders `<Feedback />` in the `#doc-footer-before` slot on every doc page.
 
+`custom.css` carries the brand palette plus the `.video-container` rules described under **Tutorial Videos** — no component is involved in video embedding.
+
 `components/Feedback.vue` posts votes and comments to a Google Apps Script endpoint using `mode: 'no-cors'`, tagged with `PRODUCT_NAME = 'FluentSMTP-user-docs'`. The same component is used across the sibling WPManageNinja doc repos, distinguished only by that constant — **if you copy this component elsewhere, change `PRODUCT_NAME`** or the feedback lands under the wrong product.
 
 Both the endpoint URL and the product name are hardcoded. Treat them as configuration, not as something to refactor without asking.
+
+## Tutorial Videos
+
+Videos use the standard VitePress approach — markdown files are compiled as Vue SFCs, so a plain YouTube `<iframe>` is written straight into the markdown. There is no component and no plugin. The only addition is a `.video-container` wrapper, which is **required**:
+
+```markdown
+## Video Tutorial
+
+[One sentence of framing] –
+
+<div class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/hDcolf4oLlM"
+    title="Connect Gmail or Google Workspace Emails With FluentSMTP"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+</div>
+```
+
+**Why the wrapper is not optional.** VitePress's base reset gives `iframe` `display: block`, but its `max-width: 100%` rule applies only to `img` and `video`. Paste YouTube's embed code on its own and the iframe keeps its intrinsic `560x315` and overflows the content column on phones. The wrapper discards the fixed size and drives the frame from `width: 100%` + `aspect-ratio: 16 / 9`.
+
+**Sizing.** Doc screenshots are `max-width: 100%`, so they render at the full width of the content column (688px with the outline visible, wider without). The wrapper's `width: 100%` resolves to that same number at every breakpoint, so videos and screenshots share one edge-to-edge column. Its `margin: 16px 0` matches `.vp-doc p`, which is what wraps an image. Do not add explicit `width`/`height` attributes to the iframe — the CSS governs sizing, and hardcoded values fight it.
+
+The styles live in `.vitepress/theme/custom.css` under "Tutorial Video Embeds".
+
+**Rules**
+
+- **Only videos from the official WPManageNinja channel** (`@wpmanageninja`, `UCiyeXfnGx9e06hXWf0Hz7ow`). Several high-ranking FluentSMTP tutorials on YouTube belong to third parties — the Amazon SES walkthrough `qFFFGOM2ba0` is from *WPJafor*, not WPManageNinja. Verify the channel before embedding.
+- Always set a real `title` on the iframe. It is the embed's accessible name; screen reader users get "YouTube video player" otherwise.
+- Place the video section directly after the intro, before the first procedural section — readers who prefer video should not have to scroll past the steps to find it.
+- On a written guide, add a note that the text is the current source of truth. Provider UIs drift faster than videos get re-recorded.
+- Swap `youtube.com/embed` for `youtube-nocookie.com/embed` if the embed ever needs to stop setting ad-profiling cookies. Same markup otherwise.
+
+**Current coverage:** only two FluentSMTP videos exist on the official channel out of 941 total, so 22 of the 24 docs have no video and that is expected, not an oversight.
+
+| Video | Doc |
+|---|---|
+| `hDcolf4oLlM` — Connect Gmail or Google Workspace Emails With FluentSMTP (11:02) | `/connect-gmail-or-google-workspace-with-fluentsmtp` |
+| `GxHY9ZVGvL8` — FluentSMTP: The Smartest Email SMTP Solution for WordPress (2:54) | `/introduction-to-fluentsmtp-dashboard` |
 
 ## Markdown Standards
 
@@ -134,7 +178,7 @@ Both the endpoint URL and the product name are hardcoded. Treat them as configur
 - **Bold** for UI element names and button labels
 - Numbered lists for step-by-step instructions
 - Internal links use the clean URL slug: `[text](/slug)`
-- No HTML tags in markdown unless absolutely necessary
+- No HTML tags in markdown unless absolutely necessary — the `.video-container` + `<iframe>` video embed is the one sanctioned exception, since that is VitePress's own way of embedding video
 
 ---
 
