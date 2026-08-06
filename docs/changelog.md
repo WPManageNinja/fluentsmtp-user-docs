@@ -2,6 +2,44 @@
 
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentSMTP.
 
+## FluentSMTP v2.3.0
+
+_Released on August 5, 2026_
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Cloudflare Email Sending Provider
+• Adds Recipient Picker and Resend History for Email Logs (props @faisalahammad)
+• Adds Daily Connection Health Check with dashboard alerts and failure notifications
+• Adds WP-CLI commands for test email, connection health, stats and log pruning
+• Adds Amazon SES EU Sovereign Cloud region (Germany, Brandenburg)
+• Adds send time tracking on every email log
+• Adds fluent_mail/manage_capability filter to change the required admin capability
+• Adds inline image embedding for SMTP connections via the wp_mail_embed_args filter
+• Adds inline setup guides for Cloudflare and toSend
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes List-Unsubscribe one-click headers being encoded and ignored by mailbox providers on Amazon SES, Gmail and Outlook (props @rogerjudd)
+• Fixes ampersands in the site title showing as HTML entities in the From Name, subject and email logs (props @ikamal7)
+• Fixes Outlook failures reporting a generic "Unauthorized" instead of the reason Microsoft gave (props @reikjarloekl)
+• Fixes From Name losing its last character when written without a space before the angle bracket
+• Fixes weekly and monthly reports merging data across different years
+• Fixes toSend Reply-To formatting and sender validation messages
+• Fixes nested array sanitization issue in email logs
+```
+
+```markdown [🚀 Improvements]
+• Improves sending speed with connection reuse for Amazon SES, toSend and FluentCRM bulk sending
+• Improves Email Log performance with a new database index and batched pruning
+• Updates the wp_mail() replacement to match WordPress 7.0 core
+• Security: Hardens security across the plugin
+• Improves UI and translations
+```
+
+:::
+
 ## FluentSMTP v2.2.95
 
 _Released on December 28, 2025_
