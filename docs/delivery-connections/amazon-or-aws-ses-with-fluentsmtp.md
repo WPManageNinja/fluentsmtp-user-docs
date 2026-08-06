@@ -79,6 +79,8 @@ Our Region is US East (North Virginia) [us-east-1]. We will be using this region
 
 ![Fluentsmtp Amazon Aws Ses Configure 6 Scaled](/images/delivery-connections/amazon-or-aws-ses-with-fluentsmtp/FluentSMTP-Amazon-AWS-SES-Configure-6-scaled.webp)
 
+> **Note:** As of v2.3.0, FluentSMTP also supports **EU Sovereign Cloud (Germany, Brandenburg)** `[eusc-de-east-1]` in the Region dropdown, alongside the regular EU regions like Frankfurt, Milan, and Stockholm. This is a separate AWS partition (`aws-eusc`), so your IAM user and SES identity need to be created in an AWS European Sovereign Cloud account — the credentials from your regular AWS account won't work here.
+
 #### **Create Access Key and Secret Key**
 
 You can create the **Access Key** and **Secret Key** now, click on the **Create Access Key** button from the User Overview page. 
@@ -131,6 +133,8 @@ define( 'FLUENTMAIL_AWS_SECRET_ACCESS_KEY', '********************' );
 ![Fluentsmtp Amazon Aws Ses Configure 12 Scaled](/images/delivery-connections/amazon-or-aws-ses-with-fluentsmtp/FluentSMTP-Amazon-AWS-SES-Configure-12-scaled.webp)
 
 That’s all about Configuring FluentSMTP with Amazon Web Services or AWS SES(Simple Email Service) to send emails from the WordPress website. Additionally, it is recommended to [Send a test email](/introduction-to-fluentsmtp-dashboard#send-a-test-email), [Test Email Confirmation](/introduction-to-fluentsmtp-dashboard#test-email-confirmation) and then [Confirm Test Email Deliverability](/introduction-to-fluentsmtp-dashboard#confirm-test-email-deliverability).
+
+> As of v2.3.0, FluentSMTP reuses the SES connection across sends instead of reconnecting each time, which improves sending speed — especially for bulk sends like FluentCRM campaigns. No setup is needed to benefit from this; it applies automatically.
 
 ## Additional Resources
 
