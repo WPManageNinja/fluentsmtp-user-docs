@@ -85,6 +85,8 @@ export default defineConfig({
           { text: 'Set Up Netcore Mailer', link: '/set-up-the-netcore-mailer-in-fluentsmtp' },
           { text: 'Configure SMTP2GO', link: '/configure-smtp2go-in-fluentsmtp-to-send-emails' },
           { text: 'Any Hosting Email Service', link: '/any-hosting-email-service-with-fluentsmtp' },
+          { text: 'Connect Cloudflare', link: '/connect-cloudflare-with-fluentsmtp' },
+          { text: 'Connect toSend', link: '/connect-tosend-with-fluentsmtp' },
         ]
       },
       {
@@ -98,6 +100,7 @@ export default defineConfig({
         text: 'Alerts',
         collapsed: false,
         items: [
+          { text: 'Connection Health Check', link: '/connection-health-check' },
           { text: 'Email Summary', link: '/email-summary' },
           { text: 'Email Sending Error Notification - Slack', link: '/email-sending-error-notification-slack' },
           { text: 'Email Sending Error Notification - Telegram', link: '/email-sending-error-notification-telegram' },
@@ -109,6 +112,8 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Multiple SMTP Connections & Auto Routing', link: '/multiple-smtp-connections-auto-routing' },
+          { text: 'WP-CLI Commands', link: '/wp-cli-commands' },
+          { text: 'Filters & Hooks', link: '/fluentsmtp-filters-and-hooks' },
         ]
       },
       {
