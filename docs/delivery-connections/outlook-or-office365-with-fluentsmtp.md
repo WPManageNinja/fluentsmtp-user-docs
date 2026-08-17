@@ -47,6 +47,10 @@ If you already have an existing App registered, then you will have to click on t
 2. **Supported Application Type:** This must be "Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)" to let FluentSMTP get authorized in the later steps and send emails from your Microsoft Account.
 3. **Redirect URI:** The Platform should be of **Web** type and the Redirect URI is the **App Callback URL** collected from the earlier step provided by the FluentSMTP plugin on your website.
 
+> **Note:** If your organization uses a single-tenant app registration (**Accounts in this organizational directory only**) instead of the multitenant type above, FluentSMTP now supports it. In the **FluentSMTP Microsoft Settings**, provide your Azure app's **Directory (tenant) ID** — found on the app's **Overview** page next to the **Application (client) ID** — in the optional **Directory (Tenant) ID** field.
+
+**[PLACEHOLDER — needs verification]** Exact field placement/label in the FluentSMTP Microsoft Settings screen, and a screenshot, still need to be confirmed and added here.
+
 The Redirect URI is in the following format:
 
 ```
