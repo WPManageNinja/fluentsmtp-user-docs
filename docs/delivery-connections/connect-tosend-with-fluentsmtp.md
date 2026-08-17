@@ -13,15 +13,15 @@ Learn how to connect **toSend** as an email sending provider by following the st
 
 First, go to **FluentSMTP** from **Settings** of **WordPress Dashboard** in the left sidebar, and select **toSend** from the given **Connection Providers**.
 
-![FluentSMTP Dashboard Connection Providers](/images/delivery-connections/connect-tosend-with-fluentsmtp/01-fluentsmtp-dashboard.webp)
+<!-- TODO: Screenshot needed — "FluentSMTP Dashboard Connection Providers" → /images/delivery-connections/connect-tosend-with-fluentsmtp/01-fluentsmtp-dashboard.webp -->
 
 But if you are already connected to any email service provider, go to the **Settings** section from the **FluentSMTP Navbar** and click the **+ Add Another Connection** button.
 
-![Add Another Connection Button](/images/delivery-connections/connect-tosend-with-fluentsmtp/02-add-connection.webp)
+<!-- TODO: Screenshot needed — "Add Another Connection Button" → /images/delivery-connections/connect-tosend-with-fluentsmtp/02-add-connection.webp -->
 
 Click the **toSend** tab to connect to this provider.
 
-![toSend Provider Tab](/images/delivery-connections/connect-tosend-with-fluentsmtp/03-tosend-tab.webp)
+<!-- TODO: Screenshot needed — "toSend Provider Tab" → /images/delivery-connections/connect-tosend-with-fluentsmtp/03-tosend-tab.webp -->
 
 After you choose the provider, it will take you to the **toSend Api Settings** page where you will get all the options to connect your toSend account. FluentSMTP shows an inline setup guide on this screen that walks through the same steps as below.
 
@@ -34,7 +34,7 @@ After you choose the provider, it will take you to the **toSend Api Settings** p
 - **API Key:** The credential obtained from your toSend account, described in the next section.
 - **Additional Sender Emails:** Optional — add more From addresses that route through this same toSend connection. Each one must also be on a domain verified in your toSend account.
 
-![toSend Add Connection Page](/images/delivery-connections/connect-tosend-with-fluentsmtp/04-add-connection-page.webp)
+<!-- TODO: Screenshot needed — "toSend Add Connection Page" → /images/delivery-connections/connect-tosend-with-fluentsmtp/04-add-connection-page.webp -->
 
 ## Get API Key from toSend
 
@@ -42,17 +42,17 @@ First, sign in to your [toSend dashboard](https://dash.tosend.com/) and add your
 
 Now, publish the SPF, DKIM, and DMARC DNS records toSend shows for that domain, and wait for it to verify.
 
-![toSend Domain Verification](/images/delivery-connections/connect-tosend-with-fluentsmtp/05-tosend-domain-verification.webp)
+<!-- TODO: Screenshot needed — "toSend Domain Verification" → /images/delivery-connections/connect-tosend-with-fluentsmtp/05-tosend-domain-verification.webp -->
 
 Then, open [API Keys](https://dash.tosend.com/app/api-keys) in your toSend dashboard, create a new key, and copy its value — keep it safe for the next step.
 
-![toSend API Keys Page](/images/delivery-connections/connect-tosend-with-fluentsmtp/06-tosend-api-keys.webp)
+<!-- TODO: Screenshot needed — "toSend API Keys Page" → /images/delivery-connections/connect-tosend-with-fluentsmtp/06-tosend-api-keys.webp -->
 
 ## Configured toSend
 
 Once you paste the **API Key** into FluentSMTP, enter a **From Email** on your verified domain, and click the **Save Connection Settings** button, your toSend connection is ready to send emails.
 
-![Configured toSend Connection](/images/delivery-connections/connect-tosend-with-fluentsmtp/07-configured-tosend.webp)
+<!-- TODO: Screenshot needed — "Configured toSend Connection" → /images/delivery-connections/connect-tosend-with-fluentsmtp/07-configured-tosend.webp -->
 
 > To learn the details about **General Settings**, read this [documentation](/fluentsmtp-settings). It's recommended to send a test email to confirm the configuration works — see the [dashboard overview](/introduction-to-fluentsmtp-dashboard) for how to do that.
 

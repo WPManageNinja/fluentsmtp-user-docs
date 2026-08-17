@@ -48,7 +48,7 @@ As of v2.3.0, this opens a **Resend Email** dialog where you choose **Send this 
 - **My account email:** Resend to your own WordPress account email, useful for checking how the email looks without notifying the original recipient.
 - **A different email address:** Type in one or more addresses, separated by commas, to resend somewhere else entirely.
 
-![Resend Email Dialog](/images/miscellaneous/fluentsmtp-email-logs-feature/06-resend-email-dialog.webp)
+<!-- TODO: Screenshot needed — "Resend Email Dialog" → /images/miscellaneous/fluentsmtp-email-logs-feature/06-resend-email-dialog.webp -->
 
 Once you choose a target and confirm, you'll see that your mail has been resent. 
 
@@ -58,7 +58,7 @@ Once you choose a target and confirm, you'll see that your mail has been resent.
 
 Open a log entry's **View Email** details and, if it's been resent before, you'll see a **Resend History** list showing each past attempt: who it was sent to, when, who triggered it (if done manually from the dashboard), how long that resend took to send, and whether it succeeded or failed.
 
-![Resend History in Email Log Details](/images/miscellaneous/fluentsmtp-email-logs-feature/07-resend-history.webp)
+<!-- TODO: Screenshot needed — "Resend History in Email Log Details" → /images/miscellaneous/fluentsmtp-email-logs-feature/07-resend-history.webp -->
 
 > **Note:** Resend History keeps the most recent attempts for each log entry — very old resends may age out if a log has been resent many times.
 

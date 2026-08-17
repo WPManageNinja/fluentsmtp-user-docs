@@ -14,7 +14,7 @@ First, go to **FluentSMTP** from **Settings** of **WordPress Dashboard** in the 
 
 Now, if a connection has failed its most recent health check, you'll see a **Connection needs attention** alert naming the sender email and provider, with the failure reason underneath.
 
-![FluentSMTP Dashboard Connection Health Alert](/images/alerts/connection-health-check/01-dashboard-health-alert.webp)
+<!-- TODO: Screenshot needed — "FluentSMTP Dashboard Connection Health Alert" → /images/alerts/connection-health-check/01-dashboard-health-alert.webp -->
 
 To fix it, go to that connection's settings and correct the credential or setting the alert points to, then save. The next daily check clears the alert once the connection passes again.
 
