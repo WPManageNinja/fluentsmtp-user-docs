@@ -47,6 +47,10 @@ Fill out the **Register an Application** page with the **App Name** and other de
 
 ![Outlook App Reg 6 Scaled](/images/delivery-connections/configure-fluentsmtp-with-microsoft-outlookoffice-email/Outlook-App-Reg-6-scaled.webp)
 
+> **Note:** If your organization uses a single-tenant app registration (**Accounts in this organizational directory only**) instead of the multitenant type above, FluentSMTP now supports it. In the Fluent SMTP Microsoft connection settings, provide your Azure app's **Directory (tenant) ID** — found on the app's **Overview** page next to the **Application (client) ID** — in the optional **Directory (Tenant) ID** field.
+
+**[PLACEHOLDER — needs verification]** Exact field placement/label in the Fluent SMTP Microsoft connection settings screen, and a screenshot, still need to be confirmed and added here.
+
 After that, you will be redirected to your App **Overview** where you can get the **Application Client ID**. Copy this **Application Client ID** for later use. 
 
 ![Outlook App Reg 7 Scaled](/images/delivery-connections/configure-fluentsmtp-with-microsoft-outlookoffice-email/Outlook-App-Reg-7-scaled.webp)
