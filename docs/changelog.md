@@ -2,6 +2,23 @@
 
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentSMTP.
 
+## FluentSMTP v2.3.1
+
+_Released on August 13, 2026_
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Adds optional Directory (tenant) ID for Outlook / Office 365, for single-tenant Entra app registrations that cannot accept personal Microsoft accounts
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes "Could not instantiate mail function." on the PHP mail() connection when a host or plugin selects its own transport from the phpmailer_init hook
+• Fixes mail routed outside FluentSMTP being sent through the site's own SMTP relay when a bulk sending session held a connection open
+```
+
+:::
+
 ## FluentSMTP v2.3.0
 
 _Released on August 5, 2026_
