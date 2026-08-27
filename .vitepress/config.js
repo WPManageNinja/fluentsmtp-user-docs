@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { zoomablePlugin } from './theme/plugin-zoomable.js'
 
 export default defineConfig({
   srcDir: 'docs',
@@ -12,6 +13,11 @@ export default defineConfig({
     'advanced-functionalities/:slug': ':slug',
     'alerts/:slug': ':slug',
     'miscellaneous/:slug': ':slug',
+  },
+  markdown: {
+    config: (md) => {
+      md.use(zoomablePlugin)
+    }
   },
   head: [
     ['link', { rel: 'icon', type: 'image/webp', href: '/images/brand/fluentSMTP_primary_icon.webp' }]
