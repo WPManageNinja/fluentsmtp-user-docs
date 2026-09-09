@@ -17,21 +17,22 @@ This article will guide you through configuring **Gmail/Google Workspace** with 
   ></iframe>
 </div>
 
-> **Note:** The written steps below stay current with the latest Google Cloud Console layout, so follow them if anything on screen looks different from the video.
+> [!Note]
+> The written steps below stay current with the latest Google Cloud Console layout, so follow them if anything on screen looks different from the video.
 
 ## Configuring Gmail or Google Workspace
 
 First, go to **FluentSMTP** from **Settings** of **WordPress** **Dashboard** in the left sidebar, and select your email service provider as per your needs from the given **Connection Providers**. 
 
-![1. Fluent SMTP Dashboard](/images/delivery-connections/gmail-google-workspace/1.-Fluent-SMTP-dashboard.webp)
+![Fluent SMTP Dashboard](/images/delivery-connections/gmail-google-workspace/fluentsmtp-dashboard.webp)
 
 But if you are already connected to any email service provider, go to the **Settings** section from the **FluentSMTP Navbar** and click the **+ Add Another Connection** button.
 
-![2. Add Another Connection Button](/images/delivery-connections/gmail-google-workspace/2.-Add-Another-Connection-button.webp)
+![Add Another Connection Button](/images/delivery-connections/gmail-google-workspace/add-connection-2.webp)
 
 Click the **Gmail/Google Workspace** tab to connect to this provider.
 
-![3. Google Workspace Tab](/images/delivery-connections/gmail-google-workspace/3.-Google-Workspace-tab.webp)
+![Google Workspace Tab](/images/delivery-connections/gmail-google-workspace/google-workspace-3.webp)
 
 After you choose the provider, it will take you to the **Add Connection** page where you will get all the options to connect your Gmail/Google Workspace.
 
@@ -57,7 +58,7 @@ After you choose the provider, it will take you to the **Add Connection** page w
 Once you provide all the necessary information, click the **Save Connection Settings** button.
 And, your **Gmail or Google Workspace** will be connected with your **FluentSMTP** plugin. 
 
-![4. Add Connection Page](/images/delivery-connections/gmail-google-workspace/4.-Add-connection-page.webp)
+![Add Connection Page](/images/delivery-connections/gmail-google-workspace/add-connection-page-4.webp)
 
 ## Obtain Google Cloud Application Client ID & Client Secret
 
@@ -68,7 +69,7 @@ First, go to your [Google Cloud Console platform](https://console.cloud.google.c
 > [!Note]
 > The first time accessing **Google Cloud Console**, you may see a popup asking you to select your country and agree to the Terms of Service. Go ahead and do so, then click on **AGREE AND CONTINUE** to move on to the next step.
 
-![5. Google Cloud Terms & Conditions Popup](/images/delivery-connections/gmail-google-workspace/5.-Google-cloud-terms-popup.webp)
+![Google Cloud Terms & Conditions Popup](/images/delivery-connections/gmail-google-workspace/google-cloud-terms-popup-5.webp)
 
 ### Creating New Project 
 
