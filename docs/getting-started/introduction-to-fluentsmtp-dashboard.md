@@ -1,6 +1,6 @@
 # Introduction to FluentSMTP Dashboard
 
-Welcome to **FluentSMTP** — the most advanced and feature-rich WordPress Mail SMTP plugin, purpose-built for speed, reliability, and scale. The **FluentSMTP Dashboard** is your single command center for everything email on your WordPress site: connections, logs, real-time alerts, deliverability reports, and more.
+Welcome to **FluentSMTP**, the most advanced and feature-rich WordPress Mail SMTP plugin, purpose-built for speed, reliability, and scale. The **FluentSMTP Dashboard** is your single command center for everything email on your WordPress site: connections, logs, real-time alerts, deliverability reports, and more.
 
 Whether you are sending a handful of transactional emails or routing thousands of marketing campaigns through multiple providers, the dashboard gives you full visibility and complete control over how WordPress delivers mail.
 
@@ -23,18 +23,19 @@ The **Dashboard Home** is the first screen you see after opening FluentSMTP. It 
 
 FluentSMTP is engineered to make WordPress emails fast, reliable, and effortless to manage. Here is what it brings to the table –
 
-- **Native API Integrations** — Connect with Gmail, Outlook / Office 365, Amazon SES, SendGrid, Mailgun, Brevo, Postmark, SparkPost, Elastic Email, Netcore, SMTP2GO, and any standard SMTP server.
-- **Real-Time Email Delivery** — Emails go out the moment your site triggers them, with no queue delay or background lag.
-- **Smart Email Routing** — Send different types of emails through different providers automatically based on rules you define.
-- **Fallback Connection** — Configure a backup connection that takes over the instant your primary fails, so no email is ever lost.
-- **Detailed Email Logs** — Every outgoing email is logged with full status, recipient, headers, and the complete server response.
-- **One-Click Resend** — Resend any failed or successful email straight from the logs without leaving WordPress.
-- **In-Depth Reports** — Visual charts of sent, successful, and failed emails grouped by day, time, and connection.
-- **Real-Time Failure Alerts** — Receive instant notifications on Slack, Telegram, Discord, or email the moment something goes wrong.
-- **Lightning-Fast UI** — A Vue.js-powered admin built for speed, clarity, and accessibility.
-- **100% Free & Open Source** — No license keys, no premium gates. The full plugin is free, forever.
+- **Native API Integrations**: Connect with Gmail, Outlook / Office 365, Amazon SES, SendGrid, Mailgun, Brevo, Postmark, SparkPost, Elastic Email, Netcore, SMTP2GO, and any standard SMTP server.
+- **Real-Time Email Delivery**: Emails go out the moment your site triggers them, with no queue delay or background lag.
+- **Smart Email Routing**: Send different types of emails through different providers automatically based on rules you define.
+- **Fallback Connection**: Configure a backup connection that takes over the instant your primary fails, so no email is ever lost.
+- **Detailed Email Logs**: Every outgoing email is logged with full status, recipient, headers, and the complete server response.
+- **One-Click Resend**: Resend any failed or successful email straight from the logs without leaving WordPress.
+- **In-Depth Reports**: Visual charts of sent, successful, and failed emails grouped by day, time, and connection.
+- **Real-Time Failure Alerts**: Receive instant notifications on Slack, Telegram, Discord, or email the moment something goes wrong.
+- **Lightning-Fast UI**: A Vue.js-powered admin built for speed, clarity, and accessibility.
+- **100% Free & Open Source**: No license keys, no premium gates. The full plugin is free, forever.
 
-> **Note:** All features above work out of the box right after installation. There is no setup wizard to complete and no upgrade nag — just install, connect a provider, and you are ready to send.
+> [!Note]
+> All features above work out of the box right after installation. There is no setup wizard to complete and no upgrade nag — just install, connect a provider, and you are ready to send.
 
 ## Settings
 
@@ -66,7 +67,8 @@ Now check your email client to confirm the message has actually landed in the in
 
 ![Fluent SMTP Test Email Received](/images/getting-started/introduction-to-fluentsmtp-dashboard/fluent-smtp-test-email-received.webp)
 
-> **Note:** If the test email is not in the **Inbox** folder, check your **Junk** or **Spam** folder as well. Domain reputation, IP reputation, and provider deliverability all influence inbox placement, so an arrival in spam is still proof the connection is working.
+> [!Note]
+> If the test email is not in the **Inbox** folder, check your **Junk** or **Spam** folder as well. Domain reputation, IP reputation, and provider deliverability all influence inbox placement, so an arrival in spam is still proof the connection is working.
 
 ## Documentation
 
