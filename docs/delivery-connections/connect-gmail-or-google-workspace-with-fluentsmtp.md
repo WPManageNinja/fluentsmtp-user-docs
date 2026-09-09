@@ -22,13 +22,13 @@ This article will guide you through configuring **Gmail/Google Workspace** with 
 
 ## Configuring Gmail or Google Workspace
 
-First, go to **FluentSMTP** from **Settings** of **WordPress** **Dashboard** in the left sidebar, and select your email service provider as per your needs from the given **Connection Providers**. 
+First, go to **FluentSMTP** from **Settings** of **WordPress** **Dashboard** in the left sidebar, and select your email service provider as per your needs from the given **Connection Provider**. 
 
 ![Fluent SMTP Dashboard](/images/delivery-connections/gmail-google-workspace/fluentsmtp-dashboard.webp)
 
-But if you are already connected to any email service provider, go to the **Settings** section from the **FluentSMTP Navbar** and click the **+ Add Another Connection** button.
+But if you are already connected to any email service provider, go to the **Settings** section from the **FluentSMTP Navbar** and click the **+ Add Connection** button.
 
-![Add Another Connection Button](/images/delivery-connections/gmail-google-workspace/add-connection-2.webp)
+![Add Connection Button](/images/delivery-connections/gmail-google-workspace/add-connection-2.webp)
 
 Click the **Gmail/Google Workspace** tab to connect to this provider.
 
@@ -47,13 +47,13 @@ After you choose the provider, it will take you to the **Add Connection** page w
 
 - **Set the return-path to match the From Email**: Return Path indicates where non-delivery receipts or bounce messages will be sent. If you enable this, you'll be emailed using "From Email" if any messages bounce due to recipient email issues. If you keep it unchecked, bounce messages may be lost.
 
-- **Force Sender Name**: Check the box to align the return path with the form. This setting indicates where bounce messages are sent. If unchecked, bounce messages will be lost. When enabled, you will receive an email at the "From Email" address for any bounced messages due to recipient email issues.
+- **Force Sender Name**: Check the box to always use the **From Name** set on this connection, whatever name the sending plugin specifies.
 
 - **Application Client ID** & **Application Client Secret:** The Client ID & Client Secret have to be obtained from the **Google Cloud Platform** where you are going to use the **From Email** for this Google Workspace Connection.
 
-- **Authorized Redirect URL:** Copy this URL as you need it later to connect to the Google Cloud Platform.
+- **Authorized Redirect URI:** Copy this URL as you need it later to connect to the Google Cloud Platform.
 
-- **Access Token**: Once you fill up all the necessary information, you can get the Access token by clicking the **Authentication with Google & Get Access Token** button.
+- **Access Token**: Once you fill up all the necessary information, you can get the Access token by clicking the **Authenticate with Google** button.
 
 Once you provide all the necessary information, click the **Save Connection Settings** button.
 And, your **Gmail or Google Workspace** will be connected with your **FluentSMTP** plugin. 
@@ -84,8 +84,7 @@ You can also change the **Project ID** by clicking the **Edit** button.
 
 ![7. Project Name and Create Button](/images/delivery-connections/gmail-google-workspace/7.-Project-name-and-create-button.webp)
 
-Once you click the create button your new project will be created.
-Now, click the **Select Project** button to enable the Gmail API services.
+Once you click the **Create** button, Google Cloud creates your new project and switches you into it — you can confirm this from the project selector at the top left, which now shows your project name.
 
 ![8. Select Created Project Button](/images/delivery-connections/gmail-google-workspace/8.-Select-created-project-button.webp)
 
@@ -93,11 +92,11 @@ Now, click the **Select Project** button to enable the Gmail API services.
 
 After creating the Project google will redirect you to the project dashboard where you need to enable the GMAIL API for the project.
 
-First, click the **APIs & Services** arrow icon from the left sidebar and then click on the **Enable APIs & Services** option.
+First, click the **APIs & Services** icon from the left sidebar to open the APIs & Services dashboard.
 
 ![9. APIs & Services Sidebar Option](/images/delivery-connections/gmail-google-workspace/9.-APIs-and-Services-sidebar.webp)
 
-Click on the **+ Enable APIs and Service** button.
+Click on the **+ Enable APIs and services** button.
 
 ![10. Enable APIs and Services Button](/images/delivery-connections/gmail-google-workspace/10.-Enable-APIs-and-services-button.webp)
 
@@ -133,17 +132,17 @@ In Credential Type, you need to select the **Gmail API** from the dropdown list 
 
 #### OAuth consent screen
 
-In the OAuth Consent Screen, give a name for the **App Name**, an email address for the **User support email**, and also an email for the **Developer contact information.** You can also upload the **App logo** from your device by clicking the **BROWSE** button.
+In the OAuth Consent Screen, give a name for the **App Name**, an email address for the **User support email**, and also an email for the **Developer contact information.** You can also upload the **App logo** from your device by clicking the **Browse** button.
 
 > **Remember**, use the same email addresses here that you will send WordPress emails from with FluentSMTP.
 
-Once the inputs are done click on **Save and Continue** button. 
+Once the inputs are done click on **Save and continue** button. 
 
 ![15. OAuth Consent Screen](/images/delivery-connections/gmail-google-workspace/15.-OAuth-consent-screen.webp)
 
 #### Scopes (optional)
 
-For FluentSMTP email delivery, you do not need to do anything for **Scopes** options. But, you can still configure your requirements if you need to. As it is optional, you can skip it and go to the next step by clicking the **Save and Continue** button.
+For FluentSMTP email delivery, you do not need to do anything for **Scopes** options. But, you can still configure your requirements if you need to. As it is optional, you can skip it and go to the next step by clicking the **Save and continue** button.
 
 ![16. Scopes Optional](/images/delivery-connections/gmail-google-workspace/16.-Scopes-optional.webp)
 
@@ -153,7 +152,7 @@ Now, in the OAuth Client ID, you need to provide –
 
 - The **Application Type** as **Web Application** from the dropdown list.
 - A **Name** for the **Application**.
-- The **Authorized Redirect URL** that you have copied before from the **Gmail / Google Workspace API settings** in **Fluent SMTP.**
+- The **Authorized Redirect URI** that you have copied before from the **Gmail / Google Workspace API Settings** in **Fluent SMTP.**
 
 Once you are done, click the **Create** button.
 
@@ -174,7 +173,7 @@ Now you need to publish the app you just created. Go to the **OAuth Consent Scre
 
 From the left sidebar, click on **Audience** to navigate to the Audience page. Here, you'll find the **Publish** option available for your setup.
 
-Click on the **Publish App** button right under the **Testing** section of **Publishing Status**.
+Click on the **Publish app** button right under the **Testing** section of **Publishing status**.
 
 Then, click on the **Confirm** button from the **Push to Production?** popup window if asked and your app will be published.
 
@@ -184,7 +183,7 @@ Then, click on the **Confirm** button from the **Push to Production?** popup win
 
 Finally, you can collect your necessary Credentials (Client ID and Client Secret) to configure your Gmail with your Fluent SMTP plugin. To learn how to get all credentials, follow the steps with screenshots below –
 
-First, go to **Credentials** from the left sidebar of your Google Cloud dashboard, find the **Project** **Name** you created (e.g., FluentSMTP), and click on it.
+First, go to **Credentials** from the left sidebar of your Google Cloud dashboard, find your OAuth 2.0 client under **OAuth 2.0 Client IDs** (named **Web client 1** by default, or whatever name you gave it earlier), and click on it.
 
 ![21. OAuth 2.0 Client IDs Credentials](/images/delivery-connections/gmail-google-workspace/21.-OAuth-client-IDs-credentials.webp)
 
@@ -198,7 +197,7 @@ Once you create and collect all the credentials of your Gmail or Google Workspac
 
 Go to the desired **Add Connection** page under **Settings** from the **Fluent SMTP Navbar** and **paste** the **Client ID** and **Client Secret** that you created and collected earlier in the previous steps. 
 
-Now click on the **Authenticate with Google & Get Access Token** button to get the access token for authentication.
+Now click on the **Authenticate with Google** button to get the access token for authentication.
 
 ![23. Paste Client ID and Secret](/images/delivery-connections/gmail-google-workspace/23.-Paste-client-ID-and-secret.webp)
 
@@ -224,9 +223,9 @@ Once you input all the necessary information, finally, click the **Save Connecti
 
 ## Details of Gmail / Google Workspace API Settings
 
-- **Store Application Keys in DB**: By default, this is enabled and strongly recommended. This will keep the information in the Databases in Encrypted format.
+- **Store in Database**: By default, this is enabled and strongly recommended. This will keep the information in the Databases in Encrypted format.
 
-- **Application Keys in Config File**: This allows you to store the access keys in the following section inside the wp-config.php file by the following directives.
+- **Store in wp-config.php**: This allows you to store the access keys in the following section inside the wp-config.php file by the following directives.
 
 Simply copy the following snippet and replace the stars with the corresponding credentials. Then simply paste it into the wp-config.php file of your WordPress installation.
 
