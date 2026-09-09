@@ -196,9 +196,7 @@ Here is your **Client ID** and **Client Secret** that is shown on the right side
 
 Once you create and collect all the credentials of your Gmail or Google Workspace from the Google Cloud platform, you can now configure this to your Fluent SMTP.
 
-**To learn how to connect Gmail/Google Workspace with Fluent SMTP, follow the steps with screenshots below – **
-
-First, go to the desired **Add Connection** page under **Settings** from the **Fluent SMTP Navbar** and **paste** the **Client ID** and **Client Secret** that you created and collected earlier in the previous steps. 
+Go to the desired **Add Connection** page under **Settings** from the **Fluent SMTP Navbar** and **paste** the **Client ID** and **Client Secret** that you created and collected earlier in the previous steps. 
 
 Now click on the **Authenticate with Google & Get Access Token** button to get the access token for authentication.
 
