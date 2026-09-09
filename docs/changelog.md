@@ -2,6 +2,31 @@
 
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentSMTP.
 
+## FluentSMTP v2.4.0
+
+_Released on September 8, 2026_
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Redesigns the whole admin on the shared Fluent design system, rebuilt on Vue 3, Element Plus and Vite
+• Adds a dark theme, shared with FluentCart so choosing it in one plugin chooses it in both
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes the failed-count link, Prev/Next in the viewer, filtering on a later page and pagination on phones in Email Logs
+• Fixes Bcc recipients never receiving an email sent over the Outlook / Office 365 connection
+```
+
+```markdown [🚀 Improvements]
+• Simplifies the navigation to Dashboard, Settings, Email Logs, Alerts and About, with Settings and Alerts rebuilt as at-a-glance lists
+• Improves the dashboard with sent, failed, connections and senders at the top, a Recent Activity panel and an Alerts & Notifications summary
+• Improves the email log with one-line rows and a toolbar with all filters together
+• Requires WordPress 6.5 or newer (was 5.5)
+```
+
+:::
+
 ## FluentSMTP v2.3.1
 
 _Released on August 13, 2026_
