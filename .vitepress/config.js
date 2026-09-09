@@ -71,7 +71,7 @@ export default defineConfig({
           { text: 'Introduction to FluentSMTP Dashboard', link: '/introduction-to-fluentsmtp-dashboard' },
           { text: 'Install and Activate FluentSMTP', link: '/install-and-activate-fluentsmtp' },
           { text: 'FluentSMTP Settings', link: '/fluentsmtp-settings' },
-          { text: 'Configurable Email Delivery Providers', link: '/configurable-email-delivery-providers' },
+          { text: 'Choose an Email Service', link: '/configurable-email-delivery-providers' },
         ]
       },
       {
