@@ -79,8 +79,8 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Connect Gmail or Google Workspace', link: '/connect-gmail-or-google-workspace-with-fluentsmtp' },
-          { text: 'Outlook or Office365', link: '/outlook-or-office365-with-fluentsmtp' },
-          { text: 'Configure FluentSMTP with Microsoft Outlook/Office Email', link: '/configure-fluentsmtp-with-microsoft-outlookoffice-email' },
+          { text: 'Outlook/Office365 (Azure)', link: '/outlook-or-office365-with-fluentsmtp' },
+          { text: 'Outlook/Office365 (Entra)', link: '/configure-fluentsmtp-with-microsoft-outlookoffice-email' },
           { text: 'Amazon or AWS SES', link: '/amazon-or-aws-ses-with-fluentsmtp' },
           { text: 'Setup Brevo Mailer', link: '/setup-brevo-mailer-with-fluentsmtp' },
           { text: 'Configure Mailgun', link: '/configure-mailgun-with-fluentsmtp' },

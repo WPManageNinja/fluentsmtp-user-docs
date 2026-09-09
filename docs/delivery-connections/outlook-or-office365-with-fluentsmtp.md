@@ -2,7 +2,9 @@
 
 FluentSMTP – WP Mail Plugin provides you options to connect with your Outlook or Office 365 emails and send emails over their API. It’s fast and secure. Using the OAuth2 authentication system for the connection, You can easily set up the connection and send your emails with Office 365 / Outlook emails.
 
-This is a step-by-step tutorial on setting up Outlook or Office365 API with WordPress by FluentSMTP.
+This is a step-by-step tutorial on setting up Outlook or Office365 API with WordPress by FluentSMTP, using the **Azure Portal**.
+
+We also have another documentation that demonstrates [Configuring FluentSMTP with Microsoft Entra Admin Center](/configure-fluentsmtp-with-microsoft-outlookoffice-email).
 
 ![Add Connection Button on FluentSMTP Settings Page](/images/delivery-connections/outlook-or-office365-with-fluentsmtp/fluent-smtp-add-new-connection.webp)
 
