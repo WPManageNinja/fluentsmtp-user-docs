@@ -200,6 +200,7 @@ Every doc — new or updated — must match this voice. This is derived directly
 - Use "you" naturally in conditionals and context sentences; use imperative (no subject) for direct action steps
 - Never write "the user" — always "you"
 - Beginner-friendly: assume the reader is non-technical; explain what will happen after each action
+- No em dashes (`—`) in doc prose. They read as filler. Rewrite the sentence with a period, comma, or colon instead. (This rule applies only to the docs, not to CLAUDE.md itself.)
 
 ### Intro Paragraph Pattern
 
@@ -227,13 +228,14 @@ The en dash `–` at the end of the intro is intentional — it signals the step
 
 ### Notes & Warnings
 
-Use blockquote format — educational, never alarmist:
+Use the GitHub-style admonition blockquote — educational, never alarmist:
 
 ```markdown
-> **Remember**, {important note text}.
-
-> **Note:** {additional context}.
+> [!Note]
+> {important note or additional context, one paragraph}.
 ```
+
+This replaced the older `> **Remember**, {text}.` / `> **Note:** {text}.` bolded-lead-in style — a doc you're editing may still have the old form; convert it to `[!Note]` as you touch that doc, but don't do a separate sweep of untouched docs just for this.
 
 Never use "WARNING" or "CAUTION" — the tone stays helpful throughout.
 
