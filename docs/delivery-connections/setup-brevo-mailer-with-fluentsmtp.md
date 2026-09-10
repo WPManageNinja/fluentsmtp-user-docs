@@ -10,7 +10,7 @@ To learn how to configure the **Brevo Mailer** with **FluentSMTP**, follow the s
 
 Go to **Settings** in the FluentSMTP top bar. If you haven't set up any connection yet, the setup wizard opens automatically. Otherwise, click the **+ Add Connection** button.
 
-![Add Connection Button on FluentSMTP Settings Page](/images/delivery-connections/setup-brevo-mailer-with-fluentsmtp/2.-Add-Another-Connection-Settings-tab-scaled.webp)
+![Add Connection Button on FluentSMTP Settings Page](/images/delivery-connections/setup-brevo-mailer-with-fluentsmtp/2.-Add-Connection-Settings-tab-scaled.webp)
 
 Then select the **Brevo** icon from the provider grid.
 

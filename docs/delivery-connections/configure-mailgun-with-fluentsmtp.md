@@ -6,58 +6,44 @@ This article will guide you through integrating Mailgun into WordPress using the
 
 ## Configuring Mailgun
 
-To learn how to configure the **Mailgun** with **FluentSMTP**, follow the steps with screenshots below –
+Go to **Settings** in the FluentSMTP top bar. If you haven't set up any connection yet, the setup wizard opens automatically. Otherwise, click the **+ Add Connection** button.
 
-First, go to **FluentSMTP** from **Settings** of **WordPress** **Dashboard** in the left sidebar, and select Mailgun from the given **Connection Providers**.
+![Add Connection Button on FluentSMTP Settings Page](/images/delivery-connections/configure-mailgun-with-fluentsmtp/2.-Add-Connection-Settings-tab-scaled.webp)
 
-![Fluent Smtp Dshboard 1 Scaled](/images/delivery-connections/configure-mailgun-with-fluentsmtp/1.-Fluent-SMTP-dshboard-1-scaled.webp)
+Then select the **mailgun** icon from the provider grid.
 
-But if you are already connected to any email service provider, go to the **Settings** section from the **FluentSMTP Navbar** and click the **+ Add Another Connection** button**.**
+![Mailgun Highlighted in the Add Connection Provider Grid](/images/delivery-connections/configure-mailgun-with-fluentsmtp/3.-Mailgun.webp)
 
-![Add Another Connection Settings Tab 1 Scaled](/images/delivery-connections/configure-mailgun-with-fluentsmtp/2.-Add-Another-Connection-Settings-tab-1-scaled.webp)
+> [!Note]
+> If you want to change the connection provider, click the **change** button next to the provider logo at the top of the page.
 
-Click the **Mailgun** tab to connect to this provider.
+This opens the connection form, where you provide:
 
-![Mailgun](/images/delivery-connections/configure-mailgun-with-fluentsmtp/3.-Mailgun.webp)
+- **From Email** and **From Name**
+- **Set the return-path to match the From Email**: sends bounce notices back to the **From Email** address.
+- **Force Sender Name**: uses this connection's **From Name**, whatever name the sending plugin set.
+- **Private API Key**: obtained from your Mailgun account via the **Get a Private API Key** link, described in the next section.
+- **Domain Name**: the domain you've added and verified in Mailgun, via the **Get a Domain Name** link, described further below.
+- **Select Region**: **US** or **EU**, matching what you set up in Mailgun. Anyone outside the European Union should select **US**. See [more information on Mailgun.com](https://www.mailgun.com/regions).
 
-After you choose the provider, it will take you to the **Add Connection** page where you will get all the options to connect your **Mailgun**.
+![Sender Settings and Mailgun API Settings on the Add Connection Form](/images/delivery-connections/configure-mailgun-with-fluentsmtp/4.-Add-Connection-Page.webp)
 
-> Additionally, if you want to change the connection provider, simply click the **Change** button right next to the **Mailgun** tab at the top of the page.
-
-**Here, you need to provide –**
-
-- **From Email**: The “From Email” should be the email you verified with **Mailgun**.
-
-- **From Name**: From name can be anything you want. You can use a combination of your name and company name.
-
-- **Set the return-path to match the From Email**: Return Path indicates where non-delivery receipts or bounce messages will be sent. If you enable this, you'll be emailed using "From Email" if any messages bounce due to recipient email issues. If you keep it unchecked, bounce messages may be lost
-
-- **Force Sender Name**: Check the box to align the return path with the form. This setting indicates where bounce messages are sent. If unchecked, bounce messages will be lost. When enabled, you will receive an email at the "From Email" address for any bounced messages due to recipient email issues.
-
-- **Private API Key**: The API Key has to be obtained from the **Mailgun**. To get it you can click on the [Get a Private API Key](https://app.mailgun.com/settings/api_security/api_keys) link under the Private API Key box.
-
-- **Domain Name**: Here, you have to provide the domain that you added and verified in your Mailgun. To get it you can click on the [Get a Domain Name](https://app.mailgun.com/mg/sending/domains) link under the Domain Name box.
-
-- **Select Region**: Select the region by checking the US or EU. This should match what you set up in Mailgun (anyone outside of the European Union should select the US option). To learn details, click the [More information on Mailgun.com](https://www.mailgun.com/regions) link.
-
-Once you provide all the necessary information, click the **Save Connection Settings** button.
-And, your **Mailgun** will be connected with your **FluentSMTP** plugin. 
-
-![Add Connection Page 1](/images/delivery-connections/configure-mailgun-with-fluentsmtp/4.-Add-COnnection-Page-1.webp)
+The rest of this guide walks through getting the **Private API Key** and **Domain Name** from Mailgun, then pasting them into this form.
 
 ### Get Private API Key from Mailgun
 
 Learn how to get the Private API Key from **Mailgun** by following the steps with the screenshots below –
 
-First, log into your [Mailgun Account Dashboard](https://app.mailgun.com/settings/api_security/api_keys), click the **Dropdown Arrow** right next to the profile section from the top navbar, and open the **API Security** tab**.**
+First, log into your [Mailgun Account Dashboard](https://app.mailgun.com/settings/api_security/api_keys), click the **Dropdown Arrow** right next to the profile section from the top navbar, and open the **API Security** tab.
 
 ![Api Security Tab Scaled](/images/delivery-connections/configure-mailgun-with-fluentsmtp/5.-API-Security-tab-scaled.webp)
 
 This will take you to a page that includes your **Mailgun API keys**.
 
-> **Remember**, in your Mailgun account, you will see 3 API keys; **Mailgun API keys**, **HTTP Webhook Signing key**, and **Verification Public key**. We **recommend** using your **Mailgun API Key** to **configure** **FluentSMTP**.
+> [!Note]
+> In your Mailgun account, you will see 3 API keys; **Mailgun API keys**, **HTTP Webhook Signing key**, and **Verification Public key**. We **recommend** using your **Mailgun API Key** to **configure** **FluentSMTP**.
 
-Now, if you want to generate a new API key for the configuration, click the **Add new key** button. 
+Now, if you want to generate a new API key for the configuration, click the **Add new key** button. 
 
 ![Add New Key Button](/images/delivery-connections/configure-mailgun-with-fluentsmtp/6.-Add-New-Key-button.webp)
 
@@ -69,7 +55,8 @@ Plus, by expanding the **“What does each role have access to?”** option, you
 
 Here is your **Mailgun Private API Key**, copy it by clicking the **Copy** icon.
 
-> Remember, make sure you copy the key and store it somewhere safe and accessible, as the key is only displayed once. If you lose the key, you’ll need to generate a new one by repeating the previous steps.
+> [!Note]
+> Make sure you copy the key and store it somewhere safe and accessible, as the key is only displayed once. If you lose the key, you'll need to generate a new one by repeating the previous steps.
 
 ![Copy Api Key 1](/images/delivery-connections/configure-mailgun-with-fluentsmtp/8.-Copy-API-Key-1.webp)
 
@@ -85,7 +72,8 @@ First, log into your [Mailgun Account Dashboard](https://app.mailgun.com/mg/send
 
 **Domain Name**: Here, enter the site domain you want to add in the **Domain Name** field.
 
-> We recommend you use a subdomain of your website's domain name **(e.g., subdomain.example.com)**. Mailgun will use this subdomain exclusively for sending emails and it will not be visible on your site. It doesn’t matter what you name to your subdomain, but you can use “mail” or “mg” in your subdomain as it makes the purpose clear.
+> [!Note]
+> We recommend you use a subdomain of your website's domain name **(e.g., subdomain.example.com)**. Mailgun will use this subdomain exclusively for sending emails and it will not be visible on your site. It doesn't matter what you name your subdomain, but you can use "mail" or "mg" in your subdomain as it makes the purpose clear.
 
 **Domain Region:** Here, you need to select the domain region between **US** and **EU**. If your site is hosted in the European Union, please choose the EU. If your site is hosted outside of the European Union, please leave the default option as the US.
 
@@ -101,8 +89,8 @@ After adding the domain, you will be redirected to the **DNS records** tab to ve
 
 #### Verify Your Domain
 
-> Like other SMTP services, **Mailgun** also requires you to verify your added domain by adding **Mailgun-provided Records** to your **Site's DNS** to protect the site owners and their visitors.
-You can find more information on the benefits of verifying your domain in [Mailgun’s guide](https://documentation.mailgun.com/en/latest/quickstart-sending.html#verify-your-domain).
+> [!Note]
+> Like other SMTP services, **Mailgun** also requires you to verify your added domain by adding **Mailgun-provided Records** to your **Site's DNS** to protect the site owners and their visitors. You can find more information on the benefits of verifying your domain in [Mailgun's guide](https://documentation.mailgun.com/en/latest/quickstart-sending.html#verify-your-domain).
 
 First, go to the **Site** which domain you added and open the **DNS** settings. Then**, add** all of the **Mailgun Records** for **Sending**, **Receiving**, and **Tracking** shown in the screenshot below into your **Site’s** **DNS Provider**.
 
@@ -114,7 +102,8 @@ Once you have completed the process on your site, return to this page and click 
 
 Once Mailgun verifies the DNS changes you made, you can see each record is shown as **Active**/**Verified**.
 
-> Now Mailgun will verify whether your domain has proper DNS records. This verification can take a while (sometimes 24-48 hours) because DNS records may take some time to update.
+> [!Note]
+> Mailgun will verify whether your domain has proper DNS records. This verification can take a while (sometimes 24-48 hours) because DNS records may take some time to update.
 
 ![Preview Os Each Record Verified Scaled](/images/delivery-connections/configure-mailgun-with-fluentsmtp/13.-Preview-os-each-record-verified-scaled.webp)
 
@@ -127,31 +116,25 @@ Simply, **copy** it for later use in the configuration with FluentSMTP.
 Finally, go back to the desired **Add Connection** page under **Settings** from the **Fluent SMTP Navbar,** and **paste** the **Private** **API Key** and **Domain Name** you copied from **Mailgun** into respective fields.
 
 Once you input all the necessary information, finally, click the **Save Connection Settings** button.
-And, your **Mailgun Server** will be connected to your Fluent SMTP. 
+And, your **Mailgun Server** will be connected to your Fluent SMTP. 
 
-![Paste Private Key Domain Name](/images/delivery-connections/configure-mailgun-with-fluentsmtp/15.-Paste-Private-Key-Domain-Name.webp)
+![Filled Private API Key and Domain Name Fields with Save Connection Settings Button](/images/delivery-connections/configure-mailgun-with-fluentsmtp/15.-Paste-Private-Key-Domain-Name.webp)
 
 ## Details of Mailgun API Settings
 
-- **Store API Keys in DB**: By default, this is enabled and strongly recommended. This will keep the information in the Databases in Encrypted format.
+- **Store in Database**: By default, this is enabled and strongly recommended. This will keep the information in the database in encrypted format. Tick **Disable Encryption for API Key (Not Recommended)** only if a security plugin rotates your SALT keys and the encrypted value keeps breaking.
+- **Store in wp-config.php**: This allows you to store the access keys inside the `wp-config.php` file by the following directives.
 
-- **Store API Keys in Config File**: This allows you to store the access keys in the following section inside the **wp-config.php file** by the following directives.
+Copy the snippet below, replace the stars with your own credentials, and paste it into your site's `wp-config.php` file.
 
-Simply **copy** the **following** **snippets** and **replace** the **stars** **with** the **corresponding** **credential**. Then simply **paste** **it to the wp-config.php file** of your **WordPress** **installation**
-
+```
 define( 'FLUENTMAIL_MAILGUN_API_KEY', '********************' );
 define( 'FLUENTMAIL_MAILGUN_DOMAIN', '********************' );
+```
 
-![Details Of Mailgun Api Settings](/images/delivery-connections/configure-mailgun-with-fluentsmtp/16.-Details-of-Mailgun-API-Settings.webp)
+![Store in wp-config.php View with define Snippet on the Mailgun Connection Form](/images/delivery-connections/configure-mailgun-with-fluentsmtp/16.-Details-of-Mailgun-API-Settings.webp)
 
-## Configured Mailgun 
 
-Here, you can see that your Mailgun is connected and ready to send emails from your WordPress site.
-
-> To learn the details about General Settings, read this [Documentation](/fluentsmtp-settings).
-Additionally, it is recommended to send a test email to check whether the configuration is successful or not, to learn how to send a test email in detail, read this [Documentation](/introduction-to-fluentsmtp-dashboard).
-
-![Configured Mailgun Scaled](/images/delivery-connections/configure-mailgun-with-fluentsmtp/17.-Configured-Mailgun--scaled.webp)
 
 That’s all about Configuring FluentSMTP with Mailgun to send emails from the WordPress website.
 
