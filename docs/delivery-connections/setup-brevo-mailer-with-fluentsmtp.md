@@ -8,36 +8,27 @@ This article will guide you through integrating Brevo Mailer into WordPress usin
 
 To learn how to configure the **Brevo Mailer** with **FluentSMTP**, follow the steps with screenshots below –
 
-First, go to **FluentSMTP** from **Settings** of **WordPress** **Dashboard** in the left sidebar, and select Brevo Mailer from the given **Connection Providers**.
+Go to **Settings** in the FluentSMTP top bar. If you haven't set up any connection yet, the setup wizard opens automatically. Otherwise, click the **+ Add Connection** button.
 
-![Fluent Smtp Dshboard Scaled](/images/delivery-connections/setup-brevo-mailer-with-fluentsmtp/1.-Fluent-SMTP-dshboard-scaled.webp)
+![Add Connection Button on FluentSMTP Settings Page](/images/delivery-connections/setup-brevo-mailer-with-fluentsmtp/2.-Add-Another-Connection-Settings-tab-scaled.webp)
 
-But if you are already connected to any email service provider, go to the **Settings** section from the **FluentSMTP Navbar** and click the **+ Add Another Connection** button**.** 
+Then select the **Brevo** icon from the provider grid.
 
-![Add Another Connection Settings Tab Scaled](/images/delivery-connections/setup-brevo-mailer-with-fluentsmtp/2.-Add-Another-Connection-Settings-tab-scaled.webp)
+![Brevo Highlighted in the Add Connection Provider Grid](/images/delivery-connections/setup-brevo-mailer-with-fluentsmtp/3.-Brevo-Mailer.webp)
 
-Click the **Brevo Mailer** tab to connect to this provider.
+> [!Note]
+> If you want to change the connection provider, click the **change** button next to the provider logo at the top of the page.
 
-![Brevo Mailer](/images/delivery-connections/setup-brevo-mailer-with-fluentsmtp/3.-Brevo-Mailer.webp)
+This opens the connection form, where you provide:
 
-After you choose the provider, it will take you to the **Add Connection** page where you will get all the options to connect your **Brevo Mailer**.
+- **From Email**: the email address you've verified with **Brevo**.
+- **From Name**: any name you want, such as a combination of your name and company name.
+- **Force Sender Name**: uses this connection's **From Name**, whatever name the sending plugin set.
+- **API Key**: obtained from your Brevo account, described in the next section.
 
-> Additionally, if you want to change the connection provider, simply click the **Change** button right next to the **Brevo Mailer** tab at the top of the page. 
+![Sender Settings and Sendinblue API Settings on the Add Connection Form](/images/delivery-connections/setup-brevo-mailer-with-fluentsmtp/4.-Add-connection-page.webp)
 
-**Here, you need to provide –**
-
-- **From Email**: The “From Email” should be the email you verified with **Brevo Mailer**.
-
-- **From Name**: From name can be anything you want. You can use a combination of your name and company name.
-
-- **Force Sender Name**: Check the box to align the return path with the form. This setting indicates where bounce messages are sent. If unchecked, bounce messages will be lost. When enabled, you will receive an email at the "From Email" address for any bounced messages due to recipient email issues.
-
-- **API Key**: The API Key has to be obtained from the SparkPost. To get it you can click on the [Get V3 API Key](https://app.brevo.com/settings/keys/api) link under the API Key box.
-
-Once you provide all the necessary information, click the **Save Connection Settings** button.
-And, your **Brevo Mailer** will be connected with your Fluent SMTP plugin. 
-
-![Add Connection Page](/images/delivery-connections/setup-brevo-mailer-with-fluentsmtp/4.-Add-connection-page.webp)
+The rest of this guide walks through getting the **API Key** from Brevo, then pasting it into this form.
 
 ### Get Brevo Mailer API Key
 
@@ -55,7 +46,7 @@ Give your **API Key** a **Name** as per your requirements and click the **Genera
 
 ![Name Api Key](/images/delivery-connections/setup-brevo-mailer-with-fluentsmtp/7.-Name-API-key-.webp)
 
-Here, you will get your API key. Now, press the **Copy** button and your API Key will be copied. 
+Here, you will get your API key. Now, press the **Copy** button and your API Key will be copied. 
 
 ![Copy Api Key](/images/delivery-connections/setup-brevo-mailer-with-fluentsmtp/8.-Copy-API-key.webp)
 
@@ -80,12 +71,12 @@ define( 'FLUENTMAIL_SENDINBLUE_API_KEY', '********************' );
 
 ![Detail Of Sendinblue Api Settings](/images/delivery-connections/setup-brevo-mailer-with-fluentsmtp/10.-Detail-of-Sendinblue-API-Settings.webp)
 
-## Configured Brevo Mailer 
+## Configured Brevo Mailer 
 
 Here, you can see that your Brevo Mailer is connected and ready to send emails from your WordPress site.
 
-> To learn the details about General Settings, read this [Documentation](/fluentsmtp-settings).
-Additionally, it is recommended to send a test email to check whether the configuration is successful or not, to learn how to send a test email in detail, read this [Documentation](/introduction-to-fluentsmtp-dashboard).
+> [!Note]
+> To learn the details about General Settings, read this [Documentation](/fluentsmtp-settings). Additionally, it is recommended to send a test email to check whether the configuration is successful or not, to learn how to send a test email in detail, read this [Documentation](/introduction-to-fluentsmtp-dashboard).
 
 ![Configured Brevo Mailer And General Settings Scaled](/images/delivery-connections/setup-brevo-mailer-with-fluentsmtp/11.-Configured-Brevo-Mailer-and-General-Settings-scaled.webp)
 
