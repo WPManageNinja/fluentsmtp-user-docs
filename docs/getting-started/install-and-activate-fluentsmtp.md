@@ -11,8 +11,8 @@ FluentSMTP takes over `wp_mail` and sends through an email service you connect. 
 
 1. In WordPress, go to **Plugins → Add Plugin**.
 2. Search for **fluentsmtp**.
-3. Find **FluentSMTP - WP SMTP Plugin** by **WPManageNinja**.
-4. Click the **Install Now** button, then click **Activate**.
+3. Find **FluentSMTP - WP Mail SMTP Plugin** by **WPManageNinja**.
+4. Click the **Install Now** button.
 
 ![Searching for FluentSMTP on the Add Plugins screen](/images/getting-started/install-and-activate-fluentsmtp/fluent-smtp-install.webp)
 
