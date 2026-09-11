@@ -1,45 +1,52 @@
 # Install and Activate FluentSMTP
 
-The FluentSMTP plugin fixes your email delivery issue by connecting WordPress Mail with your email service providers. These integrations are native, so they will send the emails super fast.
+FluentSMTP takes over `wp_mail` and sends through an email service you connect. Until you add a connection, WordPress still uses whatever your host left behind, which is why contact form and password-reset mail often never arrives. Learn how to install and activate FluentSMTP by following the steps below –
 
-This plugin will solve all your email deliverability problems. FluentSMTP is the ultimate WP Mail Plugin that connects with your Email Service Provider natively and makes sure your emails are delivered properly.
+## Requirements
 
-## FluentSMTP Requirements
+- WordPress 6.5 or later
+- PHP 7.4 or later
 
-To use FluentSMTP, you need:
-– WordPress 4.5 or later
-– PHP version 5.6 or later
+## Install from the Dashboard
 
-## Install & Activate the FluentSMTP Plugin from the Dashboard
+1. In WordPress, go to **Plugins → Add Plugin**.
+2. Search for **fluentsmtp**.
+3. Find **FluentSMTP - WP SMTP Plugin** by **WPManageNinja**.
+4. Click the **Install Now** button, then click **Activate**.
 
-The very first step to setting up FluentSMTP is to install the plugin on your WordPress website. 
+![Searching for FluentSMTP on the Add Plugins screen](/images/getting-started/install-and-activate-fluentsmtp/fluent-smtp-install.webp)
 
-To do so, in your WordPress dashboard, select **Plugins > Add New** from the menu. Then type *Fluent SMTP* into the search function. Once the FluentSMTP plugin is displayed, click on **Install Now** button.
+The button changes to **Activate** once the install finishes.
 
-![Fluent Smtp Install](/images/getting-started/install-and-activate-fluentsmtp/fluent-smtp-install.webp)
+![Activate button on the Add Plugins screen](/images/getting-started/install-and-activate-fluentsmtp/fluent-smtp-activate-2.webp)
 
-Once FluentSMTP is installed, then please click on the **Activate** button to make it active on the WordPress website.
+> **Note:** If another SMTP plugin is already active, WordPress will tell you. FluentSMTP should be the only plugin sending mail — deactivate the other SMTP plugin first, or you will get double-sending and confusing logs.
 
-![Fluent Smtp Activate](/images/getting-started/install-and-activate-fluentsmtp/fluent-smtp-activate.webp)
+> **Note:** If FluentSMTP is already active and you search for another SMTP plugin, FluentSMTP shows a notice: "You already have an SMTP plugin." That is the plugin protecting you from installing a second mailer — go to its settings instead.
 
-## Install & Activate FluentSMTP Manually
+After activation, go to **Settings → FluentSMTP**. That is the plugin screen — it is not a top-level menu.
 
-FluentSMTP can be installed on your site from the official WordPress plugin repository. You can also download the plugin from [wordpress.org](https://wordpress.org/plugins/fluent-smtp/) and install it on your WordPress site manually.
+![FluentSMTP row with Settings link in the Installed Plugins list](/images/getting-started/install-and-activate-fluentsmtp/fluent-smtp-active-5.webp)
 
-![Fluent Smtp Wordpress](/images/getting-started/install-and-activate-fluentsmtp/fluent-smtp-wordpress.webp)
+## Install from a Zip
 
-To manually install & activate FluentSMTP you need to download and upload the package to your WordPress and the steps are: 
+Use this if you cannot reach wordpress.org from the site, or you are installing a specific build.
 
-1. Go to [wordpress.org](https://wordpress.org/plugins/fluent-smtp/)
-2. Download the plugin by clicking on the **Download** button
-3. Go back to your **WordPress Dashboard** → **Add New** → **Upload** Plugin.
-4. Select the **.zip** file you just downloaded earlier, and click on **Install Now**.
-5. After installing, go ahead and click on the **Activate** button.
+1. Download the zip from [wordpress.org/plugins/fluent-smtp](https://wordpress.org/plugins/fluent-smtp).
 
-![Fluent Smtp Install Manually](/images/getting-started/install-and-activate-fluentsmtp/fluent-smtp-install-manually.webp)
+![Download button on the FluentSMTP WordPress.org plugin page](/images/getting-started/install-and-activate-fluentsmtp/fluent-smtp-wordpress-3.webp)
 
- And once it is activated, it will be listed under your **Active Plugins** as below:
+2. Go to **Plugins → Add Plugin → Upload Plugin**.
+3. Choose the zip, click **Install Now**, then click **Activate**.
 
-![Fluent Smtp Active](/images/getting-started/install-and-activate-fluentsmtp/fluent-smtp-active.webp)
+![Selected zip file and Install Now button on the Upload Plugin screen](/images/getting-started/install-and-activate-fluentsmtp/fluent-smtp-install-manually-4.webp)
 
-That's all for installing and activating FluentSMTP on your WordPress website. Now please follow and check out more about FluentSMTP documentation to configure your desired Email Delivery Provider and send out emails from your WordPress Website. Please follow [Configurable Email Delivery Providers](/configurable-email-delivery-providers) documentation to know how to configure different email delivery providers and which method to use for them.
+The plugin then appears under **Settings → FluentSMTP**.
+
+## What You Should See Next
+
+On a site with no connection yet, FluentSMTP opens a first-run wizard: pick a provider, fill the form, save. On a site that already has a connection, you get the dashboard.
+
+![FluentSMTP dashboard after a connection exists](/images/getting-started/install-and-activate-fluentsmtp/fluent-smtp-dashboard-6.webp)
+
+Next: choose an [email service](/configurable-email-delivery-providers) and save a connection. Then send a test from **Send Test Email** in the top bar.

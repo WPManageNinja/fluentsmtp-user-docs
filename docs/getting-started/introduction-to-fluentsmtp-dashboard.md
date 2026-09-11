@@ -1,77 +1,66 @@
 # Introduction to FluentSMTP Dashboard
 
-Welcome to **FluentSMTP** — the most advanced and feature-rich WordPress Mail SMTP plugin, purpose-built for speed, reliability, and scale. The **FluentSMTP Dashboard** is your single command center for everything email on your WordPress site: connections, logs, real-time alerts, deliverability reports, and more.
+FluentSMTP is easily accessible from your WordPress admin panel by navigating to **Settings → FluentSMTP**. The interface is designed for simplicity, featuring a primary top navigation bar and a main content area that displays one page at a time.
 
-Whether you are sending a handful of transactional emails or routing thousands of marketing campaigns through multiple providers, the dashboard gives you full visibility and complete control over how WordPress delivers mail.
+The top navigation bar contains your main destinations: **Dashboard**, **Settings**, **Email Logs**, **Alerts**, and **About**. On the right side of this bar, you will find quick-access tools including the **Send Test Email** button, a documentation search icon (i), and an appearance toggle.
 
-This guide walks you through every section of the dashboard so you can find what you need at a glance.
+Here is a complete breakdown of the dashboard interface and its features.
 
-<div class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/GxHY9ZVGvL8"
-    title="FluentSMTP: The Smartest Email SMTP Solution for WordPress"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen
-  ></iframe>
-</div>
+## The Dashboard View
 
-## Dashboard Home
+Once you have set up at least one active connection, the Dashboard provides a comprehensive overview of how your site's email sending is performing.
 
-The **Dashboard Home** is the first screen you see after opening FluentSMTP. It gives you a quick snapshot of your email activity — total emails sent, success and failure counts, your active connections, and the most recent delivery trends — all in one place.
+### 1. Quick Stats Cards
 
-FluentSMTP is engineered to make WordPress emails fast, reliable, and effortless to manage. Here is what it brings to the table –
+At the very top of the dashboard, you will see four quick-glance metrics:
 
-- **Native API Integrations** — Connect with Gmail, Outlook / Office 365, Amazon SES, SendGrid, Mailgun, Brevo, Postmark, SparkPost, Elastic Email, Netcore, SMTP2GO, and any standard SMTP server.
-- **Real-Time Email Delivery** — Emails go out the moment your site triggers them, with no queue delay or background lag.
-- **Smart Email Routing** — Send different types of emails through different providers automatically based on rules you define.
-- **Fallback Connection** — Configure a backup connection that takes over the instant your primary fails, so no email is ever lost.
-- **Detailed Email Logs** — Every outgoing email is logged with full status, recipient, headers, and the complete server response.
-- **One-Click Resend** — Resend any failed or successful email straight from the logs without leaving WordPress.
-- **In-Depth Reports** — Visual charts of sent, successful, and failed emails grouped by day, time, and connection.
-- **Real-Time Failure Alerts** — Receive instant notifications on Slack, Telegram, Discord, or email the moment something goes wrong.
-- **Lightning-Fast UI** — A Vue.js-powered admin built for speed, clarity, and accessibility.
-- **100% Free & Open Source** — No license keys, no premium gates. The full plugin is free, forever.
+* **Emails sent:** The total number of successful emails sent within the current period.
+* **Emails failed:** The total number of emails that failed to send. Clicking on this will take you directly to the Email Logs, automatically filtered to show the failures.
+* **Active connections:** The number of SMTP or API routing connections currently active on your site.
+* **Active senders:** The number of "From" addresses currently in use.
 
-> **Note:** All features above work out of the box right after installation. There is no setup wizard to complete and no upgrade nag — just install, connect a provider, and you are ready to send.
+### 2. Sending Stats Chart
 
-## Settings
+This dynamic chart gives you a visual representation of your sent (blue) and failed (red) emails over time. You can easily adjust the reporting period by using the **Start date to End date** selector at the top of the chart and clicking **Apply**. You can also toggle between a bar chart and a line graph view.
 
-The **Settings** section is the central control panel of FluentSMTP. Here you manage default and fallback connections, email logging behavior, retention rules, multi-part email options, and more.
+### 3. Sending by Time of Day
 
-For a complete breakdown of every available setting and what it does, read the [FluentSMTP Settings](/fluentsmtp-settings) guide.
+This section displays a heatmap tracking your email volume throughout the week, broken down by hour. It is a highly useful tool for identifying peak sending hours or checking if emails are getting bottlenecked at a specific time of day.
 
-## Email Test
+### 4. Right-Hand Sidebar Widgets
 
-The **Email Test** tool is a quick way to confirm that any configured email connection is actually delivering mail. Use it after setting up a new provider, after switching connections, or any time you want to verify deliverability.
+The right column of the dashboard gives you quick administrative insights:
 
-### Send a Test Email
+* **Alerts & Notifications:** Displays the current status (On/Off) of your Failure Alerts and Summary Emails. You can click **Manage** to adjust these.
+* **Email Logs:** Shows whether email logging is turned On or Off, and how many days your logs are retained before being deleted.
+* **Recent Activity:** A quick feed of the latest emails processed by your site, showing whether they were successfully delivered or failed. You can filter this feed by *All*, *Today*, *Yesterday*, and *Last 7 Days*.
 
-1. **From:** The **From Field** lets you choose the sender email based on your configured email connections. If nothing is selected, the default connection is used.
-2. **Send To:** Use a free ESP email address (Gmail, Outlook, Yahoo, etc.) in the **Send To Field** to receive the test email and confirm it arrives.
-3. **HTML:** Choose whether to send the test email in **HTML MIME** or **Plain Text** format.
+![Fluent SMTP Dashboard](/images/getting-started/introduction-to-fluentsmtp-dashboard/dashboard-1.webp)
 
-![Fluent SMTP Send Test Email](/images/getting-started/introduction-to-fluentsmtp-dashboard/fluent-smtp-send-test-email.webp)
+## Dashboard Theme Settings
 
-### Test Email Confirmation
+FluentSMTP includes a built-in dark mode to match your preferences. Click the **Appearance icon** (the sun icon) in the top right corner of the navigation bar to reveal a dropdown menu. From here, you can switch the plugin interface between:
 
-Once you send the test email, FluentSMTP attempts to dispatch it through the selected connection. If the connectivity to the remote mail server and the authentication credentials are both healthy, you will see a success message like the one below.
+* **Light** mode
+* **Dark** mode
+* **System** (matches your current operating system or browser theme)
 
-![Fluent SMTP Test Email Sent](/images/getting-started/introduction-to-fluentsmtp-dashboard/fluent-smtp-test-email-sent.webp)
+![Dashboard Theme Settings](/images/getting-started/introduction-to-fluentsmtp-dashboard/theme-settings-2.webp)
 
-### Confirm Test Email Deliverability
+## Sending a Test Email
 
-Now check your email client to confirm the message has actually landed in the inbox. In the example below, a Gmail account received the test email successfully.
+Because testing is the most frequent check run by site admins, the **Send Test Email** button is persistently pinned to the top right of the navigation bar.
 
-![Fluent SMTP Test Email Received](/images/getting-started/introduction-to-fluentsmtp-dashboard/fluent-smtp-test-email-received.webp)
+To verify your configuration:
 
-> **Note:** If the test email is not in the **Inbox** folder, check your **Junk** or **Spam** folder as well. Domain reputation, IP reputation, and provider deliverability all influence inbox placement, so an arrival in spam is still proof the connection is working.
+1. Click the **Send Test Email** button in the top bar.
+2. **From:** Select one of your connected addresses from the dropdown list. If you leave it empty, the plugin will use your Default connection.
+3. **Send To:** Enter an email address you have access to. Your WordPress admin email is filled in by default.
+4. **HTML:** Leave this toggle enabled to send an HTML-formatted test email, or turn it off to send a plain-text version.
+5. Click the **Send Test Email** button at the bottom of the form.
 
-## Documentation
+> **Note on Deliverability:** If the plugin reports a success message, it simply means WordPress successfully handed the message over to your email provider. To confirm it landed in the inbox, open your testing mailbox. If it is not in the Inbox, check the Spam folder. If the email never arrives, navigate to **Email Logs** to read the raw server response for troubleshooting.
 
-The last menu in the dashboard is **Documentation** — your in-app shortcut to setup guides, configuration walkthroughs, and provider-specific tutorials. Use it whenever you need a quick reference without leaving WordPress.
+![Send a Test Email](/images/getting-started/introduction-to-fluentsmtp-dashboard/send-test-email-3.webp)
 
-![Fluent SMTP Settings Documentation](/images/getting-started/introduction-to-fluentsmtp-dashboard/fluent-smtp-settings-documentation.webp)
 
-That is the full FluentSMTP Dashboard at a glance. From here, the next step is to [install and activate FluentSMTP](/install-and-activate-fluentsmtp) (if you have not already) and then [connect your first email delivery provider](/configurable-email-delivery-providers). Happy Fluent mailing!

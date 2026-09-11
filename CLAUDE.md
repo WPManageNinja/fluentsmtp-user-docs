@@ -161,7 +161,14 @@ The styles live in `.vitepress/theme/custom.css` under "Tutorial Video Embeds".
 - **Only videos from the official WPManageNinja channel** (`@wpmanageninja`, `UCiyeXfnGx9e06hXWf0Hz7ow`). Several high-ranking FluentSMTP tutorials on YouTube belong to third parties — the Amazon SES walkthrough `qFFFGOM2ba0` is from *WPJafor*, not WPManageNinja. Verify the channel before embedding.
 - Always set a real `title` on the iframe. It is the embed's accessible name; screen reader users get "YouTube video player" otherwise.
 - Place the video section directly after the intro, before the first procedural section — readers who prefer video should not have to scroll past the steps to find it.
-- On a written guide, add a note that the text is the current source of truth. Provider UIs drift faster than videos get re-recorded.
+- On a written guide, add a note that the text is the current source of truth. Provider UIs drift faster than videos get re-recorded. Place it directly after the `.video-container` block, using this exact structure:
+
+  ```markdown
+  > [!Note]
+  > The written steps below stay current with the latest {Provider UI} layout, so follow them if anything on screen looks different from the video.
+  ```
+
+  Swap `{Provider UI}` for the interface the doc's steps walk through (e.g. "Google Cloud Console", "Azure Portal") — not the provider's brand name if those differ.
 - Swap `youtube.com/embed` for `youtube-nocookie.com/embed` if the embed ever needs to stop setting ad-profiling cookies. Same markup otherwise.
 
 **Current coverage:** only two FluentSMTP videos exist on the official channel out of 941 total, so 22 of the 24 docs have no video and that is expected, not an oversight.
@@ -193,6 +200,7 @@ Every doc — new or updated — must match this voice. This is derived directly
 - Use "you" naturally in conditionals and context sentences; use imperative (no subject) for direct action steps
 - Never write "the user" — always "you"
 - Beginner-friendly: assume the reader is non-technical; explain what will happen after each action
+- No em dashes (`—`) in doc prose. They read as filler. Rewrite the sentence with a period, comma, or colon instead. (This rule applies only to the docs, not to CLAUDE.md itself.)
 
 ### Intro Paragraph Pattern
 
@@ -220,13 +228,14 @@ The en dash `–` at the end of the intro is intentional — it signals the step
 
 ### Notes & Warnings
 
-Use blockquote format — educational, never alarmist:
+Use the GitHub-style admonition blockquote — educational, never alarmist:
 
 ```markdown
-> **Remember**, {important note text}.
-
-> **Note:** {additional context}.
+> [!Note]
+> {important note or additional context, one paragraph}.
 ```
+
+This replaced the older `> **Remember**, {text}.` / `> **Note:** {text}.` bolded-lead-in style — a doc you're editing may still have the old form; convert it to `[!Note]` as you touch that doc, but don't do a separate sweep of untouched docs just for this.
 
 Never use "WARNING" or "CAUTION" — the tone stays helpful throughout.
 
