@@ -9,9 +9,12 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview",
+    "featured:generate": "node scripts/generate-featured-images.mjs",
+    "featured:regenerate": "node scripts/generate-featured-images.mjs --force"
   },
   "devDependencies": {
+    "sharp": "^0.35.4",
     "vitepress": "^1.0.0"
   }
 }
