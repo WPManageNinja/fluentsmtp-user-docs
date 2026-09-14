@@ -1,91 +1,67 @@
 # Configure Elastic Email with FluentSMTP
 
-In FluentSMTP, you can configure **Elastic Email** to improve email deliverability and authenticity. Elastic Email provides the API to send emails and it will allow you to send 1000 emails at only $0.10 which is a very low price considering the service they offer.
+With FluentSMTP, you can integrate **Elastic Email** into WordPress to improve email deliverability and authenticity. Elastic Email provides the API to send emails and it will allow you to send 1000 emails at only $0.10, which is a very low price considering the service they offer.
 
-This article will guide you through integrating **Elastic Email** into WordPress using the FluentSMTP plugin to send emails via SMTP.
+This article will guide you through integrating Elastic Email into WordPress using the FluentSMTP plugin to send emails via SMTP.
+
 
 ## Configuring Elastic Email
 
-To learn how to configure the **Elastic Email** with **FluentSMTP**, follow the steps with screenshots below –
+Go to **Settings** in the FluentSMTP top bar. If you haven't set up any connection yet, the setup wizard opens automatically. Otherwise, click the **+ Add Connection** button.
 
-First, go to **FluentSMTP** from **Settings** of **WordPress** **Dashboard** in the left sidebar, and select Elastic Email from the given **Connection Providers**.
+![settings page with add connection button](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/1.webp)
 
-![Fluent Smtp Dshboard Scaled](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/1.-Fluent-SMTP-dshboard-scaled.webp)
+Then select the **Elastic Email** icon from the provider grid.
 
-But if you are already connected to any email service provider, go to the **Settings** section from the **FluentSMTP Navbar** and click the **+ Add Another Connection** button**.**
+![elastic email highlighted in the add connection provider grid](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/2.webp)
 
-![Add Another Connection Settings Tab Scaled](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/2.-Add-Another-Connection-Settings-tab-scaled.webp)
+> [!Note]
+> If you want to change the connection provider, click the **change** button next to the provider logo at the top of the page.
 
-Click the **Elastic Email** tab to connect to this provider.
+This opens the connection form, where you provide:
 
-![Elastic Email](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/3.-Elastic-Email.webp)
+- **From Email** and **From Name**
+- **Force Sender Name**: uses this connection's **From Name**, whatever name the sending plugin set.
+- **API Key**: obtained from your Elastic Email account via the **Get API Key** link, described in the next section.
+- **Email Type**: choose **Transactional** for individual messages like password resets and order confirmations, or **Marketing** for bulk emails like newsletters and campaigns.
 
-After you choose the provider, it will take you to the **Add Connection** page where you will get all the options to connect your **Elastic Email**.
+![empty add connection form for elastic email](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/3.webp)
 
-> Additionally, if you want to change the connection provider, simply click the **Change** button right next to the **Elastic Email** tab at the top of the page.
+The rest of this guide walks through getting the **API Key** from Elastic Email, then pasting it into this form.
 
-**Here, you need to provide –**
-
-- **From Email**: The “From Email” should be the email you verified with **Elastic Email**.
-
-- **From Name**: From name can be anything you want. You can use a combination of your name and company name.
-
-- **Force Sender Name**: Check the box to align the return path with the form. This setting indicates where bounce messages are sent. If unchecked, bounce messages will be lost. When enabled, you will receive an email at the "From Email" address for any bounced messages due to recipient email issues.
-
-- **API Key**: The API Key has to be obtained from the **Elastic Email**. To get it you can click on the [Get API Key](https://elasticemail.com/account#/settings/new/manage-api) link under the API Key box.
-
-- **Email Type**: Here, you can provide a clear instruction about the purpose of your email sending by choosing the **Email** **Type** between **Transactional** and **Marketing**.
-
-Once you provide all the necessary information, click the **Save Connection Settings** button.
-And, your **Elastic Email** will be connected with your **FluentSMTP** plugin. 
-
-![Add Connection Page](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/4.-Add-connection-page.webp)
-
-### Get SparkPost API Key
+### Get Elastic Email API Key
 
 Learn how to get the API Key from **Elastic Email** by following the steps with the screenshots below –
 
 First, log into your [Elastic Email Account](https://elasticemail.com/account#/settings/new/manage-api), click the **Settings** section from the left sidebar, and select the **Create additional API Key** option.
 
-![Settings Of Elastic Email Acount Scaled](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/5.-Settings-of-Elastic-Email-Acount-scaled.webp)
+![settings tab in elastic email account](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/4.webp)
 
-Give your **API Key** a **Name** as per your requirements. Also can set the **Expiration** **Date** and access restriction for your API if needed.
+Give your **API Key** a **Name** as per your requirements. You can also set the **Expiration Date** and access restrictions if needed. Then give the necessary **Custom Permissions** and click the **Create** button, and your API key will be created.
 
-Then, give the necessary **Custom** **Permissions** shown in the screenshot below and click the **Create** button and your API will be created.
+![create api key page in elastic email](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/5.webp)
 
-![Create Api Key Page](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/6.-create-API-key-page.webp)
+Here, you will get your API key in the **New API Key** box. Press the **Copy** button and your API Key will be copied.
 
-Here, you will get your API key in the **New API Key** box. Now, press the **Copy** button and your API Key will be copied. 
+![copy api key in elastic email](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/6.webp)
 
-![Copy Api Key](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/7.-copy-API-key.webp)
+Then, go back to the **Add Connection** page under **Settings** in the FluentSMTP top bar, and **paste** the API Key you copied from Elastic Email inside the **API Key** box.
 
-Then, go back to the desired **Add Connection** page under **Settings** from the **Fluent SMTP Navbar** and **paste** the API Key you copied from **Elastic Email** inside the **API Key** box. 
+Once you input all the necessary information, click the **Save Connection Settings** button. Your Elastic Email server will be connected to your FluentSMTP.
 
-Once you input all the necessary information, finally, click the **Save Connection Settings** button.
-And, your **Elastic Email** server will be connected to your **FluentSMTP**.
+![filled add connection form ready to save](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/7.webp)
 
-![Paste Api Key](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/8.-Paste-API-key.webp)
+## Details of Elastic Email API Settings
 
-## Details of ElasticEmail API Settings
+- **Store in Database**: By default, this is enabled and strongly recommended. This will keep the information in the database in encrypted format. Tick **Disable Encryption for API Key (Not Recommended)** only if a security plugin rotates your SALT keys and the encrypted value keeps breaking.
+- **Store in wp-config.php**: This allows you to store the access key inside the `wp-config.php` file by the following directive.
 
-- **Store API Keys in DB**: By default, this is enabled and strongly recommended. This will keep the information in the Databases in Encrypted format.
+Copy the snippet below, replace the stars with your own credential, and paste it into your site's `wp-config.php` file.
 
-- **Store API Keys in Config File**: This allows you to store the access keys in the following section inside the **wp-config.php file** by the following directives.
-
-Simply **copy** the **following** **snippet** and **replace** the **stars** **with** the **corresponding** **credential**. Then simply **paste** **it to the wp-config.php file** of your **WordPress** **installation**
-
+```
 define( 'FLUENTMAIL_ELASTICMAIL_API_KEY', '********************' );
+```
 
-![Detail Of Elastic Email Api Settings](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/9.-Detail-of-Elastic-Email-API-Settings.webp)
+![wp-config.php snippet in add connection page](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/8.webp)
 
-## Configured Elastic Email 
-
-Here, you can see that your Elastic Email is connected and ready to send emails from your WordPress site.
-
-> To learn the details about General Settings, read this [Documentation](/fluentsmtp-settings).
-Additionally, it is recommended to send a test email to check whether the configuration is successful or not, to learn how to send a test email in detail, read this [Documentation](/introduction-to-fluentsmtp-dashboard).
-
-![Configured Elastic Email And General Settings Scaled](/images/delivery-connections/configure-elastic-email-with-fluentsmtp/10.-Configured-Elastic-Email-and-General-Settings-scaled.webp)
-
-That’s all about Configuring FluentSMTP with Elastic Email to send emails from the WordPress website.
-
+That's all about configuring FluentSMTP with Elastic Email to send emails from the WordPress website.
