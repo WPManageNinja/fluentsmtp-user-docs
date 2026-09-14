@@ -6,38 +6,28 @@ This article will guide you through integrating **SendGrid** into WordPress usin
 
 ## Configuring SendGrid
 
-To learn how to configure the **SendGrid** with **FluentSMTP**, follow the steps with screenshots below – 
+To learn how to configure the **SendGrid** with **FluentSMTP**, follow the steps with screenshots below – 
 
-First, go to **FluentSMTP** from **Settings** of **WordPress** **Dashboard** in the left sidebar, and select SendGrid from the given **Connection Providers**.
+Go to **Settings** in the FluentSMTP top bar. If you haven't set up any connection yet, the setup wizard opens automatically. Otherwise, click the **+ Add Connection** button.
 
-![Fluent Smtp Dshboard 2 Scaled](/images/delivery-connections/setup-the-sendgrid-driver-with-fluentsmtp/1.-Fluent-SMTP-dshboard-2-scaled.webp)
+![Add Connection Button on FluentSMTP Settings Page](/images/delivery-connections/setup-the-sendgrid-driver-with-fluentsmtp/2.-Add-Another-Connection-Settings-tab-3-scaled.webp)
 
-But if you are already connected to any email service provider, go to the **Settings** section from the **FluentSMTP Navbar** and click the **+ Add Another Connection** button**.**
+Then select the **SendGrid** icon from the provider grid.
 
-![Add Another Connection Settings Tab 3 Scaled](/images/delivery-connections/setup-the-sendgrid-driver-with-fluentsmtp/2.-Add-Another-Connection-Settings-tab-3-scaled.webp)
+![SendGrid Highlighted in the Add Connection Provider Grid](/images/delivery-connections/setup-the-sendgrid-driver-with-fluentsmtp/3.-Sendgrid.webp)
 
-Click the **SendGrid** tab to connect to this provider.
+> [!Note]
+> If you want to change the connection provider, click the **change** button next to the provider logo at the top of the page.
 
-![Sendgrid](/images/delivery-connections/setup-the-sendgrid-driver-with-fluentsmtp/3.-Sendgrid.webp)
+This opens the connection form, where you provide:
 
-After you choose the provider, it will take you to the **Add Connection** page where you will get all the options to connect your **SendGrid**.
+- **From Email** and **From Name**
+- **Force Sender Name**: uses this connection's **From Name**, whatever name the sending plugin set.
+- **API Key**: obtained from your SendGrid account via the **Create API Key** link, described in the next section. The key only needs **Mail Send** permission.
 
-> Additionally, if you want to change the connection provider, simply click the **Change** button right next to the **SendGrid** tab at the top of the page.
+![Sender Settings and SendGrid API Settings on the Add Connection Form](/images/delivery-connections/setup-the-sendgrid-driver-with-fluentsmtp/4.-Add-Connection-Page-2.webp)
 
-**Here, you need to provide –**
-
-- **From Email**: The “From Email” should be the email you verified with **SendGrid**.
-
-- **From Name**: From name can be anything you want. You can use a combination of your name and company name.
-
-- **Force Sender Name**: Check the box to align the return path with the form. This setting indicates where bounce messages are sent. If unchecked, bounce messages will be lost. When enabled, you will receive an email at the "From Email" address for any bounced messages due to recipient email issues.
-
-- **API Key**: The API Key has to be obtained from the **SendGrid**. To get it you can click on the [Create API Key](https://app.sendgrid.com/settings/api_keys) link under the API Key box.
-
-Once you provide all the necessary information, click the **Save Connection Settings** button.
-And, your **SendGrid** will be connected with your **FluentSMTP** plugin. 
-
-![Add Connection Page 2](/images/delivery-connections/setup-the-sendgrid-driver-with-fluentsmtp/4.-Add-Connection-Page-2.webp)
+The rest of this guide walks through getting the **API Key** from SendGrid, then pasting it into this form.
 
 ### Get SendGrid API Key
 
@@ -62,27 +52,18 @@ Then, go back to the desired **Add Connection** page under **Settings** from the
 Once you input all the necessary information, finally, click the **Save Connection Settings** button.
 And, your **SendGrid** server will be connected to your **FluentSMTP**.
 
-![Paste Api Key](/images/delivery-connections/setup-the-sendgrid-driver-with-fluentsmtp/8.-Paste-API-Key.webp)
+![Filled API Key Field with Save Connection Settings Button](/images/delivery-connections/setup-the-sendgrid-driver-with-fluentsmtp/8.-Paste-API-Key.webp)
 
 ## Details of SendGrid API Settings
 
-- **Store API Keys in DB**: By default, this is enabled and strongly recommended. This will keep the information in the Databases in Encrypted format.
+- **Store in Database**: By default, this is enabled and strongly recommended. This will keep the information in the database in encrypted format. Tick **Disable Encryption for API Key (Not Recommended)** only if a security plugin rotates your SALT keys and the encrypted value keeps breaking.
+- **Store in wp-config.php**: This allows you to store the access key inside the `wp-config.php` file by the following directive.
 
-- **Store API Keys in Config File**: This allows you to store the access keys in the following section inside the **wp-config.php file** by the following directives.
+Copy the snippet below, replace the stars with your own credential, and paste it into your site's `wp-config.php` file.
 
-Simply **copy** the **following** **snippet** and **replace** the **stars** **with** the **corresponding** **credential**. Then simply **paste** **it to the wp-config.php file** of your **WordPress** **installation**
-
+```
 define( 'FLUENTMAIL_SENDGRID_API_KEY', '********************' );
+```
 
-![Detail Of Sendgrid Api Settings](/images/delivery-connections/setup-the-sendgrid-driver-with-fluentsmtp/9.-Detail-of-SendGrid-API-Settings-.webp)
+![Store in wp-config.php View with define Snippet on the SendGrid Connection Form](/images/delivery-connections/setup-the-sendgrid-driver-with-fluentsmtp/9.-Detail-of-SendGrid-API-Settings.webp)
 
-## Configured SendGrid
-
-Here, you can see that your SendGrid is connected and ready to send emails from your WordPress site.
-
-> To learn the details about General Settings, read this [Documentation](/fluentsmtp-settings).
-Additionally, it is recommended to send a test email to check whether the configuration is successful or not, to learn how to send a test email in detail, read this [Documentation](/introduction-to-fluentsmtp-dashboard).
-
-![Added Sendgrid General Settings Scaled](/images/delivery-connections/setup-the-sendgrid-driver-with-fluentsmtp/10.-Added-Sendgrid-General-Settings-scaled.webp)
-
-That’s all about Configuring FluentSMTP with SendGrid to send emails from the WordPress website.
