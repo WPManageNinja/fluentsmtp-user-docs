@@ -1,11 +1,24 @@
 # Email Summary
 
-The Summary Email feature provides detailed statistics on your email sending activities. Tailor this report to your preferences by selecting the specific day of the week for receiving email stats. Additionally, you have the flexibility to choose the email address to which these email report stats will be sent.
+FluentSMTP's **Summary Email** sends you a regular report of how many emails your site sent and how many of them failed. Once you decide which days you want to receive it, you can enable and configure the Summary Email by following the steps below –
 
-To activate the Summary Email feature, go to FluentSMTP Alert. Enable it by checking the designated checkbox. 
+## Configure the Summary Email
 
-By default, the Notification Email Addresses will be set to the admin email address, but you can customize it according to your preferences. Further, personalize your experience by choosing the days on which you want to receive the email stats.
+First, go to **FluentSMTP** from **Settings** of **WordPress Dashboard** in the left sidebar, then click the **Alerts** tab. This opens the **Alerts & Notifications** page.
 
-Lastly, click on the Save Settings button to save your changes. 
+Now, in the **Summary Email** panel on the right, toggle on **Enable Email Summary** to turn the feature on.
 
-![Fluentsmtp ‹ Perfume Shop — Wordpress 1 1](/images/alerts/email-summary/FluentSMTP-‹-Perfume-Shop-—-WordPress-1-1.webp)
+**Here, you can configure –**
+
+- **Send To**: The email addresses that receive the summary. Separate multiple addresses with commas. Use `{site_admin}` to always include the site admin's address, which is the default value.
+- **Send On**: Check the day or days of the week you want to receive the summary. **Monday** is checked by default.
+
+Finally, click the **Save Settings** button to save your changes.
+
+![Summary Email Panel with Enable Email Summary Toggle, Send To, and Send On Settings](/images/alerts/email-summary/email-summary-1.webp)
+
+## Related
+
+- [Connection Health Check](/connection-health-check): FluentSMTP's daily check of your email connections, separate from this weekly summary
+
+That's all about configuring the Summary Email in FluentSMTP.
