@@ -1,33 +1,38 @@
 # Email Sending Error Notification Discord
 
-FluentSMTP can send your Email Sending Error Notifications to Discord. Here are the step-by-step guidelines on how you can enable your Discord Notification. 
+FluentSMTP's **Email Sending Error Notification** can post a message to a **Discord** channel whenever an email fails to send, using a Discord webhook. Once you've created that webhook, you can connect it to FluentSMTP by following the steps below –
 
-Go to your FluentSMTP **Alert** and you will see the **Discord** click on it and a configuration page will appear.  
+## Connect Discord to FluentSMTP
 
-![1](/images/alerts/email-sending-error-notification-discord/1.webp)
+First, go to **FluentSMTP** from **Settings** of **WordPress Dashboard** in the left sidebar, then click the **Alerts** tab. This opens the **Alerts & Notifications** page. Under **Email Sending Error Notifications**, click the **Set Up** button next to **Discord**.
 
-Here you have to give your **Discord Channel** name in which channel you want to get a notification and then you have to give the **Webhook URL**. To get this Webhook URL go to your **Discord Account**. 
+![Set Up Button for Discord in Email Sending Error Notifications](/images/alerts/email-sending-error-notification-discord/setup-discord-1.webp)
 
-![2](/images/alerts/email-sending-error-notification-discord/2.webp)
+This takes you to the **Discord Settings** page, with a **Channel Name (for your own reference)** field and a **Channel Webhook URL** field. Keep this page open, you'll come back to paste the webhook URL in after creating it in Discord.
 
-Now in your Discord account go to the channel where you want to receive the notifications. On the right side of the Channel, you will find a **Settings** button. Click on the **Settings** button.
+![Discord Settings Page with Channel Name and Webhook URL Fields](/images/alerts/email-sending-error-notification-discord/discord-settings-2.webp)
 
-![3](/images/alerts/email-sending-error-notification-discord/3.webp)
+Now, in your **Discord** server, go to the channel where you want to receive the notifications, and click the **settings (gear)** icon next to it.
 
-Select the **Integrations** from the **Left Sidebar** of your Discord Channel settings and then you will see the **Webhook**. Here you have to create a Webhook so click on the **Create Webhook** button.  
+![Settings Gear Icon Next to a Discord Channel](/images/alerts/email-sending-error-notification-discord/open-channel-settings-3.webp)
 
-![4](/images/alerts/email-sending-error-notification-discord/4.webp)
+Select **Integrations** from the left sidebar of the channel settings, then click the **Create Webhook** button.
 
-Here you can give it any name if you want and then just copy the **Webhook URL**. 
+![Create Webhook Button in Discord Channel Integrations](/images/alerts/email-sending-error-notification-discord/create-webhook-4.webp)
 
-![5](/images/alerts/email-sending-error-notification-discord/5.webp)
+Give the webhook a **Name** and confirm the **Channel** it should post to, then click the **Copy Webhook URL** button.
 
-Now go back to your FluentSMTP account give the channel name the same as the Discord channel and paste your Discord Webhook URL here. 
+![Copy Webhook URL Button for a Discord Webhook](/images/alerts/email-sending-error-notification-discord/copy-webhook-url-5.webp)
 
-Click on the **Configure Discord Notification** button.
+Back on the FluentSMTP **Discord Settings** page, enter a **Channel Name** for your own reference, paste the copied URL into **Channel Webhook URL**, then click the **Connect Discord** button.
 
-![6](/images/alerts/email-sending-error-notification-discord/6.webp)
+![Discord Settings Page with Channel Name, Webhook URL, and Connect Discord Button](/images/alerts/email-sending-error-notification-discord/configure-discord-notification-6.webp)
 
-Your Discord configuration is complete now. You will get notifications for your Email Sending Errors now on your Discord channel. 
+Back on the **Alerts & Notifications** page, **Discord** now shows as **Connected**. Use the toggle to turn notifications on or off, click the **pencil** icon to edit the connection, or click the **trash icon** to disconnect Discord.
 
-![7](/images/alerts/email-sending-error-notification-discord/7.webp)
+> [!Note]
+> FluentSMTP recommends activating only one notification channel at a time.
+
+![Discord Connected with Toggle, Edit, and Delete Options](/images/alerts/email-sending-error-notification-discord/enable-disable-7.webp)
+
+That's all about connecting Discord to FluentSMTP for Email Sending Error Notifications.
