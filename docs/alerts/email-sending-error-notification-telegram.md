@@ -1,47 +1,44 @@
 # Email Sending Error Notification Telegram
 
-FluentSMTP will notify you **Email Sending Error Notification** for the emails you have been sent and you can get this notification on your **Telegram**. 
+FluentSMTP's **Email Sending Error Notification** can send you a message on **Telegram** whenever an email fails to send, using the official FluentSMTP Telegram bot.
 
-This guide will show you how to activate your Telegram notification. Let’s start the notification activation process.
+Learn how to connect Telegram to FluentSMTP by following the steps below –
 
-First, go to your FluentSMTP then navigate to the **Alerts**. You will see the **Telegram** here click on it and your Telegram notification configuring settings will be open.
+## Connect Telegram to FluentSMTP
 
-![Fluentsmtp ‹ Perfume Shop — Wordpress 2 1](/images/alerts/email-sending-error-notification-telegram/FluentSMTP-‹-Perfume-Shop-—-WordPress-2-1.webp)
+First, go to **FluentSMTP** from **Settings** of **WordPress Dashboard** in the left sidebar, then click the **Alerts** tab. This opens the **Alerts & Notifications** page. Under **Email Sending Error Notifications**, click the **Set Up** button next to **Telegram**.
 
-## Enable Telegram Notification
+![Set Up Button for Telegram in Email Sending Error Notifications](/images/alerts/email-sending-error-notification-telegram/setup-telegram-1.webp)
 
-From the configure notification settings of Telegram, you will find the official **FluentSMTP Telegram Bot** just click on the **[link](https://t.me/fluentsmtp_bot)** to add the Telegram Bot to your Telegram Account. You must have to log in to your Telegram account first. 
+This takes you to the **Telegram Settings** page. Enter **Your Email Address**, check **I agree to the terms and conditions of this Telegram integration**, then click the **Continue** button.
 
-![Fluentsmtp ‹ Perfume Shop — Wordpress 3 1 1](/images/alerts/email-sending-error-notification-telegram/FluentSMTP-‹-Perfume-Shop-—-WordPress-3-1-1.webp)
+![Telegram Settings Page with Email Address and Continue Button](/images/alerts/email-sending-error-notification-telegram/enter-your-gmail-2.webp)
 
-After clicking on the official Telegram bot link you will be redirected to the Telegram bot of FluentSMTP, here click on the **Send Message** button. 
+Now, the page shows the **Last Step**. Click the **copy** button next to the **Activation Pin** to copy the activation code to your clipboard.
 
-![6](/images/alerts/email-sending-error-notification-telegram/1.6.webp)
+![Last Step with Activation Pin and Copy Button](/images/alerts/email-sending-error-notification-telegram/copy-code-3.webp)
 
-Now in your Telegram account, FluentSMTP Bot will arrive like this. Click on the **Start** button.
+Then, open Telegram and go to FluentSMTP's official **telegram bot** (linked on the Telegram Settings page above), or search for **@fluentsmtp_bot** directly. If this is your first time messaging it, you'll land on its profile page, click the **Send Message** button.
 
-![7 709X1024](/images/alerts/email-sending-error-notification-telegram/1.7-709x1024.webp)
+![FluentSMTP Notification Bot Profile Page in Telegram](/images/alerts/email-sending-error-notification-telegram/find-telegram-bot-4.webp)
 
-Return to your FluentSMTP Telegram settings here agree on the terms and conditions of this Telegram Integration and click on the **Continue** button.
+This opens the chat in Telegram. Click the **Start** button to begin the conversation with the bot.
 
-![Fluentsmtp ‹ Perfume Shop — Wordpress 4 1](/images/alerts/email-sending-error-notification-telegram/FluentSMTP-‹-Perfume-Shop-—-WordPress-4-1.webp)
+![Start Button in FluentSMTP Notification Bot Chat](/images/alerts/email-sending-error-notification-telegram/start-telegram-bot-5.webp)
 
-Now you will get an **Activation PIN** code. Copy the PIN code.
+Clicking **Start** sends `/start` to the bot, which replies asking for your site's activation code. Paste the code you copied earlier and send it. The bot then replies with a **Congratulations!** message confirming your site is verified and asking you to return to FluentSMTP.
 
-![Fluentsmtp ‹ Perfume Shop — Wordpress 5 1](/images/alerts/email-sending-error-notification-telegram/FluentSMTP-‹-Perfume-Shop-—-WordPress-5-1.webp)
+![Telegram Chat Showing Activation Code Sent and Confirmation Message](/images/alerts/email-sending-error-notification-telegram/telegram-activation-chat-6.webp)
 
-Paste the PIN code on your Telegram Account and send it to the Telegram FluentSMTP Bot and you will get a *Congratulations!* message from your FluentSMTP Telegram bot. 
+Finally, go back to your FluentSMTP **Telegram Settings** page and click the **I have sent the code** button.
 
-![7 702X1024](/images/alerts/email-sending-error-notification-telegram/7-702x1024.webp)
+![I Have Sent the Code Button on Telegram Settings Page](/images/alerts/email-sending-error-notification-telegram/i-have-sent-code-7.webp)
 
-Click on **I have sent the code** button. 
+Back on the **Alerts & Notifications** page, **Telegram** now shows as **Connected**. Use the toggle to turn notifications on or off, click the pencil icon to edit the connection, or click the trash icon to disconnect Telegram.
 
-![Fluentsmtp ‹ Perfume Shop — Wordpress 10 1](/images/alerts/email-sending-error-notification-telegram/FluentSMTP-‹-Perfume-Shop-—-WordPress-10-1.webp)
+> [!Note]
+> FluentSMTP recommends activating only one notification channel at a time.
 
-Now you are done! you will get your Email Sending Error Notifications on your Telegram. 
+![Telegram Connected with Toggle, Edit, and Delete Options](/images/alerts/email-sending-error-notification-telegram/telegram-connected-8.webp)
 
-The Telegram username is shown in the FluentSMTP Telegram settings. If you want to remove your Telegram account from FluentSMTP notifications click the **Disconnect** button.
-
-![Fluentsmtp ‹ Perfume Shop — Wordpress 11 1](/images/alerts/email-sending-error-notification-telegram/FluentSMTP-‹-Perfume-Shop-—-WordPress-11-1.webp)
-
-Congrats! You have successfully added your Telegram account in FluentSMTP for Email sending error notifications.
+That's all about connecting Telegram to FluentSMTP for Email Sending Error Notifications.
