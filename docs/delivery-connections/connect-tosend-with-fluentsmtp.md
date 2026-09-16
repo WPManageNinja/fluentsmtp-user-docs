@@ -40,21 +40,29 @@ After you choose the provider, it will take you to the **toSend API Settings** p
 
 ## Get API Key from toSend
 
-First, sign in to your [toSend dashboard](https://dash.tosend.com/) and add your sending domain if you haven't already.
+First, sign in to your [toSend dashboard](https://dash.tosend.com/) and open **Domains**. Add your sending domain if you haven't already, then publish the **DKIM** and **SPF** DNS records toSend shows for it at your DNS provider.
 
-Now, publish the SPF, DKIM, and DMARC DNS records toSend shows for that domain, and wait for it to verify.
+Once the records are in place, click the **Verify DNS Records** button. toSend also checks automatically every 10 minutes, so verification can complete even if you don't click it.
 
-<!-- TODO: Screenshot needed — "toSend Domain Verification" → /images/delivery-connections/connect-tosend-with-fluentsmtp/05-tosend-domain-verification.webp -->
+![DKIM and SPF DNS Records with Verify DNS Records Button on toSend](/images/delivery-connections/connect-tosend-with-fluentsmtp/domain-verification-4.webp)
 
-Then, open [API Keys](https://dash.tosend.com/app/api-keys) in your toSend dashboard, create a new key, and copy its value — keep it safe for the next step.
+Now, open **API Keys** from the left sidebar and click the **+ Create API Key** button.
 
-<!-- TODO: Screenshot needed — "toSend API Keys Page" → /images/delivery-connections/connect-tosend-with-fluentsmtp/06-tosend-api-keys.webp -->
+![Create API Key Button on the toSend API Keys Page](/images/delivery-connections/connect-tosend-with-fluentsmtp/api-keys-5.webp)
+
+Give the key a **Name**, optionally restrict it to one **Domain** (leave this blank to allow all your verified domains), then click the **Create** button.
+
+![Name and Create Button in the Create API Key Dialog](/images/delivery-connections/connect-tosend-with-fluentsmtp/create-api-key-6.webp)
+
+Then, click the **copy** icon next to the key to copy it, and keep it safe for the next step, you won't be able to see it again. Click **Done** once you've copied it.
+
+![API Key Created Dialog with Copy Icon](/images/delivery-connections/connect-tosend-with-fluentsmtp/copy-api-created-7.webp)
 
 ## Configured toSend
 
 Once you paste the **API Key** into FluentSMTP, enter a **From Email** on your verified domain, and click the **Save Connection Settings** button, your toSend connection is ready to send emails.
 
-![toSend Connection Form with API Key and Sender Details Saved](/images/delivery-connections/connect-tosend-with-fluentsmtp/enter-api-key-4.webp)
+![toSend Connection Form with API Key and Sender Details Saved](/images/delivery-connections/connect-tosend-with-fluentsmtp/enter-api-key-8.webp)
 
 ## Details of toSend API Settings
 
@@ -67,7 +75,7 @@ Copy the snippet below, replace the stars with your own API key, and paste it in
 define( 'FLUENTMAIL_TOSEND_API_KEY', '********************' );
 ```
 
-![Store in wp-config.php Tab with API Key Snippet](/images/delivery-connections/connect-tosend-with-fluentsmtp/store-configure-5.webp)
+![Store in wp-config.php Tab with API Key Snippet](/images/delivery-connections/connect-tosend-with-fluentsmtp/store-configure-9.webp)
 
 > [!Note]
 > To learn the details about **General Settings**, read this [documentation](/fluentsmtp-settings). It's recommended to send a test email to confirm the configuration works — see the [dashboard overview](/introduction-to-fluentsmtp-dashboard) for how to do that.
