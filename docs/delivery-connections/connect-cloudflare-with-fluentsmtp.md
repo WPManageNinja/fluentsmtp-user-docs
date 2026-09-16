@@ -11,11 +11,11 @@ This article will guide you through integrating Cloudflare into WordPress using 
 
 ## Configuring Cloudflare
 
-First, go to **FluentSMTP** from **Settings** of **WordPress** **Dashboard** in the left sidebar, and select **Cloudflare** from the given **Connection Providers**. 
+First, go to **FluentSMTP** from **Settings** of **WordPress** **Dashboard** in the left sidebar. If you are already connected to any email service provider, click the **+ Add Connection** button on the **Settings** page first.
 
-But if you are already connected to any email service provider, go to the **Settings** section from the **FluentSMTP Navbar** and click the **+ Add Another Connection** button first.
+![Add Connection Button in FluentSMTP Settings](/images/delivery-connections/connect-cloudflare-with-fluentsmtp/01-select-cloudflare-provider.webp)
 
-![Cloudflare Selected in Connection Providers](/images/delivery-connections/connect-cloudflare-with-fluentsmtp/01-select-cloudflare-provider.webp)
+This will take you to the **Add Connection** page, where you can select **Cloudflare** from the given **Connection Providers**.
 
 ![Cloudflare Selected in Connection Providers](/images/delivery-connections/connect-cloudflare-with-fluentsmtp/select-cloudflare-2.webp)
 
@@ -70,7 +70,7 @@ And, your **Cloudflare Server** will be connected to your **FluentSMTP**.
 > [!Note]
 > The sender domain must be added to this Cloudflare account with Email Sending enabled, and its SPF, DKIM, and DMARC records published, before FluentSMTP can send through it.
 
-![Token Created Successfully Dialog with Account ID and API Token](/images/delivery-connections/connect-cloudflare-with-fluentsmtp/cloudflare-credential-added-7.webp)
+![Cloudflare Connection Form with API Token and Account ID Pasted In](/images/delivery-connections/connect-cloudflare-with-fluentsmtp/cloudflare-credential-added-7.webp)
 
 ## Details of Cloudflare API Settings
 
@@ -85,13 +85,13 @@ define( 'FLUENTMAIL_CLOUDFLARE_API_KEY', '********************' );
 define( 'FLUENTMAIL_CLOUDFLARE_ACCOUNT_ID', '********************' );
 ```
 
-![Cloudflare API Settings](/images/delivery-connections/connect-cloudflare-with-fluentsmtp/cloudflare-api-settings-8.webp)
+![Store in wp-config.php Tab with API Key and Account ID Snippet](/images/delivery-connections/connect-cloudflare-with-fluentsmtp/cloudflare-api-settings-8.webp)
 
 ## Configured Cloudflare
 
-Here, you can see that your **Cloudflare** is connected and ready to send emails from your WordPress site. Click the **eye icon** next to the connection under **Active Email Connections** to expand **Connection Details** and confirm the **Connection Status** reads **API Token is valid and active**.
+Here, you can see that your **Cloudflare** is connected and listed under **Active Email Connections**, ready to send emails from your WordPress site. Click the **three-dot (...)** button next to the **Cloudflare** connection to **Set as Default**, **Set as Fallback**, **View** the connection details, or **Delete** the connection.
 
-![Configured Cloudflare and Connection Details](/images/delivery-connections/connect-cloudflare-with-fluentsmtp/07-configured-cloudflare.webp)
+![Cloudflare Connection Options Menu in Active Email Connections](/images/delivery-connections/connect-cloudflare-with-fluentsmtp/07-configured-cloudflare.webp)
 
 > To learn the details about **General Settings**, read this [Documentation](/fluentsmtp-settings).
 Additionally, it is recommended to send a test email to check whether the configuration is successful or not, to learn how to send a test email in detail, read this [Documentation](/introduction-to-fluentsmtp-dashboard).
