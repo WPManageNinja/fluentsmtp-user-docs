@@ -2,6 +2,32 @@
 
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentSMTP.
 
+## FluentSMTP v2.4.1
+
+_Released on September 27, 2026_
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Adds the Amazon SES regions Asia Pacific (Hyderabad, Jakarta, Malaysia), Europe (Zurich), Middle East (UAE), Israel (Tel Aviv) and AWS GovCloud (US-East)
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Outlook / Office 365 connections failing to authorize on servers where Microsoft returns an HTML error page instead of a token
+• Fixes resending or retrying a logged email dropping every Cc, Bcc and Reply-To address when there are two or more
+• Fixes the email log's To column showing serialized text for emails sent to many recipients. On existing sites, delete all logs once to widen the column
+• Fixes plain-text emails losing their line breaks, and anything in angle brackets, in the email log viewer
+• Fixes SparkPost sending plain-text emails as HTML, which collapses their line breaks
+• Fixes emails failing on Postmark, and names being cut short on Mailgun, SMTP2GO and SparkPost, when a recipient's or sender's name contains a comma (for example "Shah, Jewel")
+• Fixes a long connection error on the Settings screen hiding that connection's Edit button and address, and the provider logos not showing on phones
+```
+
+```markdown [🚀 Improvements]
+• Improves translation of the test message sent by the Slack, Discord and Pushover alert channels
+```
+
+:::
+
 ## FluentSMTP v2.4.0
 
 _Released on September 8, 2026_
